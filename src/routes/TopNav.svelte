@@ -1,13 +1,29 @@
 <script lang="ts">
+	import { page } from '$app/stores'
 	import MenuItem from '$lib/components/MenuItem.svelte'
 	import ToolTip from '$lib/components/ToolTip.svelte'
+	import type { IconName } from '$elements/element-types'
+
+	// iterable menu items
+	const items: { href: string; iconName: IconName; description: string }[] = [
+		{ href: '/', iconName: 'home' as IconName, description: 'Home' },
+		{ href: '/projects', iconName: 'code' as IconName, description: 'Projects' }
+	]
 </script>
 
 <div class="nav_wrapper" data-testid="top-nav">
 	<h1>Corey Damocles</h1>
 	<div class="link_container">
-		<MenuItem href={'/'} iconName="home" description="Home" />
-		<MenuItem href={'/projects'} iconName="code" description="Projects" />
+		{#each items as item}
+			<MenuItem
+				href={item.href}
+				iconName={item.iconName}
+				active={(item.href === '/' && $page.url.pathname === '/') ||
+					(item.href !== '/' && $page.url.pathname.startsWith(item.href))}
+			>
+				{item.description}
+			</MenuItem>
+		{/each}
 		<ToolTip content="GitHub">
 			<a
 				class="github-link"
@@ -33,7 +49,7 @@
 
 <style>
 	h1 {
-		color: var(--orange);
+		color: var(--primary_color);
 	}
 	.nav_wrapper {
 		height: var(--nav_height);
@@ -54,5 +70,13 @@
 	.github-icon {
 		width: 100%;
 		height: 100%;
+	}
+
+	.link_container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+		gap: var(--gap);
 	}
 </style>

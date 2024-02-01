@@ -1,15 +1,15 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
-	import type { Accent, IconName } from '../../elements/element-types';
+	import { createEventDispatcher } from 'svelte'
+	import type { Accent, IconName } from '../../elements/element-types'
 
-	const dispatch = createEventDispatcher();
+	const dispatch = createEventDispatcher()
 
-	export let active = false;
-	export let iconName: IconName | undefined = undefined;
-	export let iconAccent: Accent | undefined = undefined;
-	export let description: string = '';
-	export let href: string | null = null;
-	export let src: string | null = null;
+	export let active = false
+	export let iconName: IconName | undefined = undefined
+	export let iconAccent: Accent | undefined = undefined
+	export let description: string = ''
+	export let href: string | null = null
+	export let src: string | null = null
 </script>
 
 <svelte:element
@@ -35,35 +35,33 @@
 
 <style lang="postcss">
 	.menu_item {
+		display: flex;
 		align-items: center;
 		gap: var(--gap_smallest);
 		position: relative;
 		width: 100%;
 		padding: var(--gap_smallest);
-		border-radius: var(--border_radius);
 		color: var(--text_color);
 		transition: var(--transition_speed) background-color;
 		cursor: pointer;
-
-		& + :global(.menu_item) {
-			margin-top: var(--gap_smallest);
-		}
 
 		:global(.icon) {
 			color: var(--subtext_color);
 		}
 
 		&:hover {
-			background-color: var(--hover_color);
-			color: var(--title_color);
+			color: var(--primary_hover_color);
+
+			:global(.icon) {
+				color: var(--primary_color);
+			}
 		}
 
 		&.active {
-			color: var(--title_color);
-			background-color: var(--primary_active_color);
+			border-bottom: 3px solid var(--primary_active_color);
 
 			:global(.icon) {
-				color: var(--title_color);
+				color: var(--primary_color);
 			}
 		}
 
