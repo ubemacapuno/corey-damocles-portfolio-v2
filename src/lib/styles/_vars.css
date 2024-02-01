@@ -35,9 +35,15 @@
 	--orange: #eb5028;
 	--orange_a: #eb50284a;
 	--orange_light: #f27249;
-	--purple: #9d38bd;
-	--pink: #df54ac;
-	--teal: #45a2b0;
+	--purple: #b17df0;
+	--purple_light: #d3a5ff;
+	--purple_a: #b17df04a;
+	--pink: #e15fed;
+	--pink_light: #f2c3ff;
+	--pink_a: #e15fed4a;
+	--teal: #00b8d4;
+	--teal_a: #00b8d44a;
+	--teal_light: #9af2ff;
 
 	/* Sizing Scales */
 	--base_size: 1rem;
@@ -89,10 +95,10 @@ body {
 	--text_color: var(--grey_9);
 	--placeholder_color: var(--grey_7);
 	--disabled_color: var(--grey_6);
-	--primary_color: var(--orange);
-	--primary_hover_color: var(--orange_light);
-	--primary_active_color: var(--orange_a);
-	--secondary_color: var(--yellow);
+	--primary_color: var(--purple);
+	--primary_hover_color: var(--teal_light);
+	--primary_active_color: var(--purple_a);
+	--secondary_color: var(--teal);
 	/* Status */
 	--warning_color: var(--red);
 	--warning_active_color: var(--red_a);
