@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Tooltip from '$lib/components/Tooltip.svelte'
+	import ToolTip from '$lib/components/ToolTip.svelte'
 	import { createEventDispatcher } from 'svelte'
 	import type { Accent, IconName, FontSize } from './element-types'
 	import Icon from './Icon.svelte'
@@ -15,16 +15,16 @@
 	export let size: FontSize = 'normal'
 	export let outline = false
 	export let name: IconName
-	export let tooltipText = ''
-	export let tooltipPlacement: 'top' | 'bottom' | 'left' | 'right' = 'top'
+	export let ToolTipText = ''
+	export let ToolTipPlacement: 'top' | 'bottom' | 'left' | 'right' = 'top'
 	export let hasPadding = true
 
 	$: if (href && !href.startsWith('/'))
 		console.error('{href} prop must start with a slash to be a valid link')
 </script>
 
-{#if tooltipText}
-	<Tooltip content={tooltipText} placement={tooltipPlacement}>
+{#if ToolTipText}
+	<ToolTip content={ToolTipText} placement={ToolTipPlacement}>
 		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<svelte:element
 			this={href ? 'a' : 'button'}
@@ -41,7 +41,7 @@
 		>
 			<Icon {name} {size} />
 		</svelte:element>
-	</Tooltip>
+	</ToolTip>
 {:else}
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<svelte:element

@@ -6,8 +6,8 @@
 <div class="nav_wrapper" data-testid="top-nav">
 	<h1>Corey Damocles</h1>
 	<div class="link_container">
-		<MenuItem href={'/'} iconName="home" />
-		<MenuItem href={'/projects'} iconName="code" />
+		<MenuItem href={'/'} iconName="home" description="Home" />
+		<MenuItem href={'/projects'} iconName="code" description="Projects" />
 		<ToolTip content="GitHub">
 			<a
 				class="github-link"

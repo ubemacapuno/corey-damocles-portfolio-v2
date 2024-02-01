@@ -1,31 +1,31 @@
 <script lang="ts">
-	import type { Placement } from '@popperjs/core';
-	import { createPopperActions } from 'svelte-popperjs';
-	import { fade } from 'svelte/transition';
+	import type { Placement } from '@popperjs/core'
+	import { createPopperActions } from 'svelte-popperjs'
+	import { fade } from 'svelte/transition'
 
-	export let placement: Placement = 'top';
-	export let content = '';
-	export let hasArrow = true;
-	export let style = '';
+	export let placement: Placement = 'top'
+	export let content = ''
+	export let hasArrow = true
+	export let style = ''
 
-	const [popperRef, popperContent] = createPopperActions({ placement });
+	const [popperRef, popperContent] = createPopperActions({ placement })
 	const extraOpts = {
 		modifiers: [{ name: 'offset', options: { offset: [0, 8] } }]
-	};
+	}
 
-	let showTooltip = false;
+	let showToolTip = false
 </script>
 
 <span
 	use:popperRef
-	on:mouseenter={() => (showTooltip = true)}
-	on:mouseleave={() => (showTooltip = false)}
+	on:mouseenter={() => (showToolTip = true)}
+	on:mouseleave={() => (showToolTip = false)}
 	{style}
 >
 	<slot />
 </span>
 
-{#if showTooltip && content}
+{#if showToolTip && content}
 	<div transition:fade={{ duration: 200 }} class="tooltip" use:popperContent={extraOpts}>
 		{@html content}
 		{#if hasArrow}
