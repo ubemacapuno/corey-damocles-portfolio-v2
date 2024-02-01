@@ -45,6 +45,12 @@
 	--teal_a: #00b8d44a;
 	--teal_light: #9af2ff;
 
+	/* GitHub Language Colors */
+	--typescript: #3178c6;
+	--svelte: #ff3e00;
+	--python: #3572a5;
+	--css: #563d7c;
+
 	/* Sizing Scales */
 	--base_size: 1rem;
 	--gap_scale: 1.5;
@@ -60,6 +66,7 @@
 	--gap_xsmall: calc(var(--gap_smallest) / var(--gap_scale));
 
 	/* Layout */
+	--card_width: var(--min_width);
 	--max_width: 800px;
 	--max_input_width: 600px;
 	--min_width: 320px;
@@ -86,6 +93,8 @@ body {
 	--sheet_color: var(--grey_1);
 	--bg_color: var(--grey_2);
 	--line_color: var(--grey_7);
+	--card_line_color: var(--grey_6);
+	--secondary_line_color: var(--purple_a);
 	--modal_color: var(--grey_4);
 	--card_color: var(--grey_5);
 	--input_border_color: var(--grey_6);

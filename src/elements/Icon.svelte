@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { FontSize, Accent, IconName } from '$elements/element-types'
+	import ForkIcon from './ForkIcon.svelte'
 
 	export let name: IconName
 	export let size: FontSize = 'large'
@@ -15,8 +16,12 @@
 	} ${size}_font ${$$props.class ?? ''}`}
 	{style}
 >
-	{name}
-</span>
+	{#if name === 'fork'}
+		<ForkIcon />
+	{:else}
+		{name}
+	{/if}</span
+>
 
 <style lang="postcss">
 	.icon {

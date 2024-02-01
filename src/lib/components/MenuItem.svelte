@@ -53,12 +53,12 @@
 			color: var(--primary_hover_color);
 
 			:global(.icon) {
-				color: var(--primary_color);
+				color: var(--primary_hover_color);
 			}
 		}
 
 		&.active {
-			border-bottom: 3px solid var(--primary_active_color);
+			border-bottom: 3px solid var(--teal_a);
 
 			:global(.icon) {
 				color: var(--primary_color);
