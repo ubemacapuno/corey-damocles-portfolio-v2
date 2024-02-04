@@ -14,7 +14,7 @@
 	.svg_fork {
 		width: 1rem;
 		height: 1rem;
-		vertical-align: text-bottom;
-		fill: #aaa;
+		vertical-align: center;
+		fill: var(--subtext_color);
 	}
 </style>

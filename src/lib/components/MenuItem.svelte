@@ -79,4 +79,10 @@
 			text-align: left;
 		}
 	}
+
+	@media (max-width: 460px) {
+		.menu_item.active {
+			border-bottom: none;
+		}
+	}
 </style>

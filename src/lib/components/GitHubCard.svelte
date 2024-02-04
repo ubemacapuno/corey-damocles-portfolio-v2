@@ -5,8 +5,8 @@
 	export let src: string
 	export let description: string
 	export let languages: { language: string; color: string }[] = []
-	export let stars: number = 0
-	export let forks: number = 0
+	export let stars = 0
+	export let forks = 0
 	export let updated: string
 </script>
 
@@ -29,8 +29,14 @@
 	</div>
 	<div class="repo-stats">
 		<div class="icons">
-			<span><Icon name="star" /> {stars === 0 ? '' : stars}</span>
-			<span><Icon name="fork" /> {forks === 0 ? '' : forks}</span>
+			<span class="icon-wrapper">
+				<Icon name="star" style="color: var(--subtext_color);" />
+				{stars === 0 ? '' : stars}
+			</span>
+			<span class="icon-wrapper">
+				<Icon name="fork" />
+				{forks === 0 ? '' : forks}
+			</span>
 		</div>
 		<span>Updated {updated}</span>
 	</div>
@@ -42,13 +48,13 @@
 		border-radius: var(--border_radius);
 		padding: var(--gap_small);
 		margin-bottom: var(--gap_small);
-		max-width: var(--card_width);
+		/* max-width: var(--card_width); */
 		color: var(--grey_8);
 		font-size: var(--font_normal);
 
 		a {
 			color: var(--teal);
-			transition: color 0.2s ease;
+			transition: var(--transition_speed) ease-in-out;
 			font-size: var(--font_large);
 
 			&:hover {
@@ -87,6 +93,7 @@
 	.repo-stats {
 		display: flex;
 		align-items: center;
+		text-align: center;
 		gap: var(--gap);
 		flex-direction: row;
 		justify-content: space-between;
@@ -98,6 +105,12 @@
 
 	.icons {
 		display: inline-flex;
+		align-items: center;
+		gap: var(--gap);
+	}
+
+	.icon-wrapper {
+		display: flex;
 		align-items: center;
 		gap: var(--gap_smallest);
 	}

@@ -5,9 +5,14 @@
 	import type { IconName } from '$elements/element-types'
 
 	// iterable menu items
-	const items: { href: string; iconName: IconName; description: string }[] = [
-		{ href: '/', iconName: 'home' as IconName, description: 'Home' },
-		{ href: '/projects', iconName: 'code' as IconName, description: 'Projects' }
+	const items: { href: string; iconName: IconName; description: string; toolTip: string }[] = [
+		{ href: '/', iconName: 'home' as IconName, description: 'Home', toolTip: 'View Homepage' },
+		{
+			href: '/projects',
+			iconName: 'code' as IconName,
+			description: 'Projects',
+			toolTip: 'View Projects'
+		}
 	]
 </script>
 
@@ -16,16 +21,20 @@
 		<h1>Corey Damocles</h1>
 		<div class="link_container">
 			{#each items as item}
-				<MenuItem
-					href={item.href}
-					iconName={item.iconName}
-					active={(item.href === '/' && $page.url.pathname === '/') ||
-						(item.href !== '/' && $page.url.pathname.startsWith(item.href))}
-				>
-					{item.description}
-				</MenuItem>
+				<ToolTip content={item.toolTip}>
+					<MenuItem
+						href={item.href}
+						iconName={item.iconName}
+						active={(item.href === '/' && $page.url.pathname === '/') ||
+							(item.href !== '/' && $page.url.pathname.startsWith(item.href))}
+					>
+						<h3>
+							{item.description}
+						</h3>
+					</MenuItem>
+				</ToolTip>
 			{/each}
-			<ToolTip content="GitHub">
+			<ToolTip content="Visit GitHub">
 				<a
 					class="github-link"
 					rel="noreferrer noopener"
@@ -56,6 +65,12 @@
 	}
 	h1 {
 		color: var(--primary_color);
+		font-size: var(--font_huge);
+	}
+
+	h3 {
+		font-size: var(--font_large);
+		margin: 0;
 	}
 	.nav_wrapper {
 		height: var(--nav_height);
@@ -76,6 +91,11 @@
 	.github-icon {
 		width: 100%;
 		height: 100%;
+
+		&:hover {
+			transition: var(--transition_speed) ease-in-out;
+			fill: var(--primary_hover_color);
+		}
 	}
 
 	.link_container {
@@ -84,5 +104,25 @@
 		justify-content: space-between;
 		flex-direction: row;
 		gap: var(--gap);
+	}
+
+	@media (max-width: 700px) {
+		h1 {
+			font-size: var(--font_xxlarge);
+		}
+
+		h3 {
+			font-size: var(--font-normal);
+		}
+	}
+
+	@media (max-width: 460px) {
+		h1 {
+			font-size: var(--font_large);
+		}
+
+		h3 {
+			display: none;
+		}
 	}
 </style>

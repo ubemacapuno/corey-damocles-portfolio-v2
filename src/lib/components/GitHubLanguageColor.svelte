@@ -10,6 +10,6 @@
 		width: 12px;
 		height: 12px;
 		border-radius: 50%;
-		margin-right: 5px;
+		margin-right: calc(var(--gap_smallest) / 2.5);
 	}
 </style>
