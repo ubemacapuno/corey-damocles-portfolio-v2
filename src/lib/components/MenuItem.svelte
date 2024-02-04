@@ -53,12 +53,12 @@
 			color: var(--primary_hover_color);
 
 			:global(.icon) {
-				color: var(--primary_color);
+				color: var(--primary_hover_color);
 			}
 		}
 
 		&.active {
-			border-bottom: 3px solid var(--primary_active_color);
+			border-bottom: 3px solid var(--teal_a);
 
 			:global(.icon) {
 				color: var(--primary_color);
@@ -77,6 +77,12 @@
 		.menu_label {
 			font-size: var(--font_small);
 			text-align: left;
+		}
+	}
+
+	@media (max-width: 460px) {
+		.menu_item.active {
+			border-bottom: none;
 		}
 	}
 </style>
