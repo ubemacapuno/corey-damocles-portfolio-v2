@@ -13,7 +13,7 @@
 </script>
 
 <h2>Projects</h2>
-<div class="grid-container">
+<div class="grid_container">
 	{#each projects as { name, description, stars, forks, updated, src, languages }}
 		<GitHubCard
 			{name}
@@ -36,7 +36,7 @@
 </div>
 
 <style>
-	.grid-container {
+	.grid_container {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: var(--gap_small);
@@ -50,12 +50,12 @@
 	}
 
 	@media (max-width: 650px) {
-		.grid-container {
+		.grid_container {
 			grid-template-columns: 1fr;
 			justify-items: center;
 		}
 
-		.grid-container > * {
+		.grid_container > * {
 			width: 100%;
 			max-width: var(--max_width);
 		}

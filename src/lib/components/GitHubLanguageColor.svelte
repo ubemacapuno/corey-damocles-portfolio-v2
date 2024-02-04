@@ -2,10 +2,10 @@
 	export let color = 'var(--sheet_color)'
 </script>
 
-<div class="language-color" style="background-color: {color}"></div>
+<div class="language_color" style="background-color: {color}"></div>
 
 <style>
-	.language-color {
+	.language_color {
 		display: inline-block;
 		width: 12px;
 		height: 12px;

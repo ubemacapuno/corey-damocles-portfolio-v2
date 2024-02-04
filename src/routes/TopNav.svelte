@@ -36,14 +36,14 @@
 			{/each}
 			<ToolTip content="Visit GitHub">
 				<a
-					class="github-link"
+					class="github_link"
 					rel="noreferrer noopener"
 					href="https://github.com/ubemacapuno/"
 					target="_blank"
 					aria-label="GitHub Repository"
 				>
 					<svg
-						class="github-icon"
+						class="github_icon"
 						fill="var(--grey_7)"
 						viewBox="0 0 24 24"
 						xmlns="http://www.w3.org/2000/svg"
@@ -83,12 +83,12 @@
 		max-width: 900px;
 		margin: 0 auto;
 	}
-	.github-link {
+	.github_link {
 		display: inline-block;
 		width: 24px;
 		height: 24px;
 	}
-	.github-icon {
+	.github_icon {
 		width: 100%;
 		height: 100%;
 
