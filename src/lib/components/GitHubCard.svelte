@@ -31,7 +31,7 @@
 	<div class="repo_stats">
 		<div class="icons">
 			<ToolTip content="Star on GitHub" placement="bottom">
-				<a href={src}>
+				<a href={src} target="_blank" rel="noreferrer noopener">
 					<span class="icon_wrapper">
 						<Icon name="star" style="color: var(--subtext_color);" hasHoverStyle />
 						{stars === 0 ? '' : stars}
@@ -39,7 +39,7 @@
 				</a>
 			</ToolTip>
 			<ToolTip content="Fork on GitHub" placement="bottom">
-				<a href={src}>
+				<a href={src} target="_blank" rel="noreferrer noopener">
 					<span class="icon_wrapper">
 						<Icon name="fork" hasHoverStyle />
 						{forks === 0 ? '' : forks}
