@@ -1,5 +1,6 @@
 <script lang="ts">
 	import GitHubLanguageColor from './GitHubLanguageColor.svelte'
+	import ToolTip from './ToolTip.svelte'
 
 	export let name: string
 	export let src: string
@@ -29,18 +30,22 @@
 	</div>
 	<div class="repo-stats">
 		<div class="icons">
-			<a href={src}>
-				<span class="icon-wrapper">
-					<Icon name="star" style="color: var(--subtext_color);" hasHoverStyle />
-					{stars === 0 ? '' : stars}
-				</span>
-			</a>
-			<a href={src}>
-				<span class="icon-wrapper">
-					<Icon name="fork" hasHoverStyle />
-					{forks === 0 ? '' : forks}
-				</span>
-			</a>
+			<ToolTip content="Star on GitHub" placement="bottom">
+				<a href={src}>
+					<span class="icon-wrapper">
+						<Icon name="star" style="color: var(--subtext_color);" hasHoverStyle />
+						{stars === 0 ? '' : stars}
+					</span>
+				</a>
+			</ToolTip>
+			<ToolTip content="Fork on GitHub" placement="bottom">
+				<a href={src}>
+					<span class="icon-wrapper">
+						<Icon name="fork" hasHoverStyle />
+						{forks === 0 ? '' : forks}
+					</span>
+				</a>
+			</ToolTip>
 		</div>
 		<span>Updated {updated}</span>
 	</div>

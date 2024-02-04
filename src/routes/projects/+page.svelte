@@ -31,7 +31,7 @@
 		outline
 		target="_blank"
 		rel="noreferrer noopener"
-		href="https://github.com/ubemacapuno?tab=repositories">View More on GitHub</Button
+		href="https://github.com/ubemacapuno?tab=repositories">View More Projects on GitHub</Button
 	>
 </div>
 
