@@ -26,6 +26,14 @@
 		/>
 	{/each}
 </div>
+<div class="button_container">
+	<Button
+		outline
+		target="_blank"
+		rel="noreferrer noopener"
+		href="https://github.com/ubemacapuno?tab=repositories">View More on GitHub</Button
+	>
+</div>
 
 <style>
 	.grid-container {
@@ -33,6 +41,12 @@
 		grid-template-columns: repeat(2, 1fr);
 		gap: var(--gap_small);
 		margin: var(--gap_small);
+	}
+
+	.button_container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	@media (max-width: 650px) {
