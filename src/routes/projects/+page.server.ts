@@ -64,7 +64,6 @@ export const load: PageServerLoad = async () => {
 		updated: new Date(repo.pushed_at).toLocaleDateString(),
 		src: repo.html_url
 	}))
-	console.log('repos:', repos)
 	return {
 		projects
 	}

@@ -6,8 +6,6 @@
 
 	$: projects = data?.projects || []
 
-	$: console.log('projects', projects)
-
 	const formatDate = (dateString: string) => {
 		const date = new Date(dateString)
 		return formatDistanceToNow(date, { addSuffix: true })

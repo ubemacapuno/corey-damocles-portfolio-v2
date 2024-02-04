@@ -48,7 +48,6 @@
 		border-radius: var(--border_radius);
 		padding: var(--gap_small);
 		margin-bottom: var(--gap_small);
-		/* max-width: var(--card_width); */
 		color: var(--grey_8);
 		font-size: var(--font_normal);
 
