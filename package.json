@@ -48,7 +48,6 @@
 	"dependencies": {
 		"@popperjs/core": "^2.11.8",
 		"date-fns": "^3.3.1",
-		"sveltekit-autoimport": "^1.7.1",
-		"three": "0.160.0"
+		"sveltekit-autoimport": "^1.7.1"
 	}
 }

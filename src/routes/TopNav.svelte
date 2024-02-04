@@ -3,6 +3,7 @@
 	import MenuItem from '$lib/components/MenuItem.svelte'
 	import ToolTip from '$lib/components/ToolTip.svelte'
 	import type { IconName } from '$elements/element-types'
+	import Avatar from '$lib/components/Avatar.svelte'
 
 	// iterable menu items
 	const items: { href: string; iconName: IconName; description: string; toolTip: string }[] = [
@@ -18,7 +19,7 @@
 
 <nav>
 	<div class="nav_wrapper" data-testid="top-nav">
-		<h1>Corey Damocles</h1>
+		<Avatar src="/images/avatar.jpeg" size="xlarge" alt="Corey Damocles" />
 		<div class="link_container">
 			{#each items as item}
 				<ToolTip content={item.toolTip}>
