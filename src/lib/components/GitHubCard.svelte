@@ -29,14 +29,18 @@
 	</div>
 	<div class="repo-stats">
 		<div class="icons">
-			<span class="icon-wrapper">
-				<Icon name="star" style="color: var(--subtext_color);" />
-				{stars === 0 ? '' : stars}
-			</span>
-			<span class="icon-wrapper">
-				<Icon name="fork" />
-				{forks === 0 ? '' : forks}
-			</span>
+			<a href={src}>
+				<span class="icon-wrapper">
+					<Icon name="star" style="color: var(--subtext_color);" hasHoverStyle />
+					{stars === 0 ? '' : stars}
+				</span>
+			</a>
+			<a href={src}>
+				<span class="icon-wrapper">
+					<Icon name="fork" hasHoverStyle />
+					{forks === 0 ? '' : forks}
+				</span>
+			</a>
 		</div>
 		<span>Updated {updated}</span>
 	</div>
@@ -50,15 +54,15 @@
 		margin-bottom: var(--gap_small);
 		color: var(--grey_8);
 		font-size: var(--font_normal);
+	}
 
-		a {
-			color: var(--teal);
-			transition: var(--transition_speed) ease-in-out;
-			font-size: var(--font_large);
+	a {
+		color: var(--teal);
+		transition: var(--transition_speed) ease-in-out;
+		font-size: var(--font_large);
 
-			&:hover {
-				color: var(--primary_hover_color);
-			}
+		&:hover {
+			color: var(--primary_hover_color);
 		}
 	}
 

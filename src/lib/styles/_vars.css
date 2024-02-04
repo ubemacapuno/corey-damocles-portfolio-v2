@@ -85,7 +85,7 @@
 
 	/* Misc */
 	--transition_speed: 0.2s;
-	--border_radius: 16px;
+	--border_radius: 6px;
 	--input_radius: var(--gap_smallest);
 	--circle_radius: 9999px;
 }
