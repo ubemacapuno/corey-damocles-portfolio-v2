@@ -3,6 +3,7 @@
 	import MenuItem from '$lib/components/MenuItem.svelte'
 	import ToolTip from '$lib/components/ToolTip.svelte'
 	import type { IconName } from '$elements/element-types'
+	import Avatar from '$lib/components/Avatar.svelte'
 
 	// iterable menu items
 	const items: { href: string; iconName: IconName; description: string; toolTip: string }[] = [
@@ -18,7 +19,7 @@
 
 <nav>
 	<div class="nav_wrapper" data-testid="top-nav">
-		<h1>Corey Damocles</h1>
+		<Avatar src="/images/avatar.jpeg" size="xlarge" alt="Corey Damocles" />
 		<div class="link_container">
 			{#each items as item}
 				<ToolTip content={item.toolTip}>
@@ -36,14 +37,14 @@
 			{/each}
 			<ToolTip content="Visit GitHub">
 				<a
-					class="github-link"
+					class="github_link"
 					rel="noreferrer noopener"
 					href="https://github.com/ubemacapuno/"
 					target="_blank"
 					aria-label="GitHub Repository"
 				>
 					<svg
-						class="github-icon"
+						class="github_icon"
 						fill="var(--grey_7)"
 						viewBox="0 0 24 24"
 						xmlns="http://www.w3.org/2000/svg"
@@ -83,12 +84,12 @@
 		max-width: 900px;
 		margin: 0 auto;
 	}
-	.github-link {
+	.github_link {
 		display: inline-block;
 		width: 24px;
 		height: 24px;
 	}
-	.github-icon {
+	.github_icon {
 		width: 100%;
 		height: 100%;
 
@@ -104,6 +105,7 @@
 		justify-content: space-between;
 		flex-direction: row;
 		gap: var(--gap);
+		padding: 0 var(--gap);
 	}
 
 	@media (max-width: 700px) {

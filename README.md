@@ -1,38 +1,55 @@
-# create-svelte
+# Project Setup TODO Checklist
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+## Must-Have Features:
 
-## Creating a project
+- [ ] **Email Form for Contact**
 
-If you're seeing this, you've probably already done this step. Congrats!
+  - Install and configure EmailJS
+    - Sign up for EmailJS
+    - Obtain API keys and integrate them into the project
+    - Create an email template for receiving messages
+    - Implement the email form in Svelte and test sending functionality
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+- [ ] **List Component**
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+  - Develop a dynamic list component for displaying projects, skills, or other relevant information
+    - Ensure responsiveness and accessibility standards are met
 
-## Developing
+- [ ] **Contact Info Links**
+  - Add clickable links for professional profiles and repositories
+    - [ ] LinkedIn
+    - [ ] GitHub
+    - [ ] CodePen
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Like-to-Have Features:
 
-```bash
-npm run dev
+- [ ] **In-App Three.js Demo**
+  - Integrate a basic Three.js scene as a demonstration of 3D capabilities within the app
+    - [ ] Research and select a simple, interactive Three.js example suitable for the portfolio theme
+    - [ ] Implement the Three.js setup within a Svelte component
+    - [ ] Ensure the demo is responsive and does not significantly impact the site's performance
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Deployment:
 
-## Building
+- [ ] Ensure all features are fully functional and tested locally
+- [ ] Deploy the latest version to Vercel
+  - [ ] Set up environment variables in Vercel for any API keys or sensitive information
+  - [ ] Confirm that the site is live and all features work as expected
 
-To create a production version of your app:
+## Optimization and Best Practices:
 
-```bash
-npm run build
-```
+- [ ] Perform a final code review to clean up and refactor where necessary
+- [ ] Test website on different browsers and devices to ensure compatibility and responsiveness
+- [ ] Validate HTML and CSS to ensure compliance with web standards
+- [ ] Optimize images and assets for faster loading times
 
-You can preview the production build with `npm run preview`.
+## Documentation:
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+- [ ] Update the README file to reflect the final state of the project, including setup instructions, feature list, and acknowledgments
+- [ ] Comment code where necessary to explain complex logic or decisions made
+
+## Final Checks:
+
+- [ ] Gather feedback from peers or mentors and make final adjustments
+- [ ] Monitor site analytics post-launch to understand user behavior and areas for improvement
+- [ ] Plan future updates or features based on feedback and performance

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import GitHubLanguageColor from './GitHubLanguageColor.svelte'
+	import ToolTip from './ToolTip.svelte'
 
 	export let name: string
 	export let src: string
@@ -16,10 +17,10 @@
 			{name}
 		</a>
 	</h3>
-	<div class="repo-description">{description}</div>
+	<div class="repo_description">{description}</div>
 	<div class="language_container">
 		{#each languages as { language, color }, i}
-			<div class="repo-language" style="color: {color}">
+			<div class="repo_language" style="color: {color}">
 				<GitHubLanguageColor {color} />
 				<span>
 					{language}
@@ -27,20 +28,24 @@
 			</div>
 		{/each}
 	</div>
-	<div class="repo-stats">
+	<div class="repo_stats">
 		<div class="icons">
-			<a href={src}>
-				<span class="icon-wrapper">
-					<Icon name="star" style="color: var(--subtext_color);" hasHoverStyle />
-					{stars === 0 ? '' : stars}
-				</span>
-			</a>
-			<a href={src}>
-				<span class="icon-wrapper">
-					<Icon name="fork" hasHoverStyle />
-					{forks === 0 ? '' : forks}
-				</span>
-			</a>
+			<ToolTip content="Star on GitHub" placement="bottom">
+				<a href={src} target="_blank" rel="noreferrer noopener">
+					<span class="icon_wrapper">
+						<Icon name="star" style="color: var(--subtext_color);" hasHoverStyle />
+						{stars === 0 ? '' : stars}
+					</span>
+				</a>
+			</ToolTip>
+			<ToolTip content="Fork on GitHub" placement="bottom">
+				<a href={src} target="_blank" rel="noreferrer noopener">
+					<span class="icon_wrapper">
+						<Icon name="fork" hasHoverStyle />
+						{forks === 0 ? '' : forks}
+					</span>
+				</a>
+			</ToolTip>
 		</div>
 		<span>Updated {updated}</span>
 	</div>
@@ -71,7 +76,7 @@
 		margin: 0 0 8px 0;
 	}
 
-	.repo-description {
+	.repo_description {
 		margin-bottom: var(--gap);
 	}
 
@@ -83,7 +88,7 @@
 		margin-bottom: var(--gap_smallest);
 	}
 
-	.repo-language {
+	.repo_language {
 		margin-bottom: 8px;
 		font-size: var(--font_small);
 
@@ -93,7 +98,7 @@
 		}
 	}
 
-	.repo-stats {
+	.repo_stats {
 		display: flex;
 		align-items: center;
 		text-align: center;
@@ -112,7 +117,7 @@
 		gap: var(--gap);
 	}
 
-	.icon-wrapper {
+	.icon_wrapper {
 		display: flex;
 		align-items: center;
 		gap: var(--gap_smallest);

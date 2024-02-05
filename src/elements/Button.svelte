@@ -15,9 +15,6 @@
 	export let iconName: IconName | '' = ''
 	export let size: FontSize = 'small'
 	export let active: boolean = false
-
-	$: if (href && !href.startsWith('/'))
-		console.error('{href} prop must start with a slash to be a valid link')
 </script>
 
 <svelte:element

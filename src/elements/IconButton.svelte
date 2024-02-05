@@ -18,9 +18,6 @@
 	export let ToolTipText = ''
 	export let ToolTipPlacement: 'top' | 'bottom' | 'left' | 'right' = 'top'
 	export let hasPadding = true
-
-	$: if (href && !href.startsWith('/'))
-		console.error('{href} prop must start with a slash to be a valid link')
 </script>
 
 {#if ToolTipText}

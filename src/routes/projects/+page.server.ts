@@ -3,12 +3,12 @@ import type { PageServerLoad } from './$types'
 export const load: PageServerLoad = async () => {
 	const username = 'ubemacapuno'
 	const repoNames = [
+		'Chrono-Core',
 		'Svelte-STEP-Bro',
 		'Rep-Log',
 		'Foodie-Blog-Sveltekit',
 		'Capa-Tracker-Sveltekit',
-		'Tortoise-Tea-House-Site',
-		'Coding-Challenges'
+		'Tortoise-Tea-House-Site'
 	]
 
 	// mapping of repo names to their languages
@@ -16,6 +16,12 @@ export const load: PageServerLoad = async () => {
 		'Svelte-STEP-Bro': [
 			{ language: 'Svelte', color: 'var(--svelte)' },
 			{ language: 'TypeScript', color: 'var(--typescript)' },
+			{ language: 'CSS', color: 'var(--css)' }
+		],
+		'Chrono-Core': [
+			{ language: 'React', color: 'var(--react)' },
+			{ language: 'TypeScript', color: 'var(--typescript)' },
+			{ language: 'Python', color: 'var(--python)' },
 			{ language: 'CSS', color: 'var(--css)' }
 		],
 		'Foodie-Blog-Sveltekit': [
@@ -36,8 +42,7 @@ export const load: PageServerLoad = async () => {
 			{ language: 'Svelte', color: 'var(--svelte)' },
 			{ language: 'TypeScript', color: 'var(--typescript)' },
 			{ language: 'CSS', color: 'var(--css)' }
-		],
-		'Coding-Challenges': [{ language: 'JavaScript', color: 'var(--javascript)' }]
+		]
 	}
 
 	const fetchRepoDetails = async (repoName: string) => {
