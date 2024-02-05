@@ -14,24 +14,32 @@
 		<p>
 			During the COVID-19 pandemic in January 2022, I became interested in leveling up my skills by
 			learning coding and web development. I partnered with fellow developers in the 100Devs
-			community, engaging in hands-on learning through the development of websites and applications
-			for agency projects.
+			community, engaging in hands-on learning through developing websites and applications for
+			agency projects.
 		</p>
 		<p>
-			My career took a significant leap in April 2022 when I joined Pure Func web development agency
-			as a consulting developer, and further progressed as I became a full-time software engineer at
-			Fast DMS in December 2022. Through the applications I develop, I focus on delivering
-			exceptional and accessible user experiences.
+			My career took a leap in April 2022 when I joined the <a
+				href="https://www.purefunc.io/"
+				target="_blank"
+				rel="noreferrer noopener"
+			>
+				Pure Func</a
+			>
+			web development agency as a consulting developer, and further progressed as I became a
+			full-time software engineer at
+			<a href="https://fastdms.com/" target="_blank" rel="noreferrer noopener">Fast DMS</a> in December
+			2022. Through the applications I develop, I focus on delivering exceptional and accessible user
+			experiences.
 		</p>
 		<p>
 			Outside of work, my passions include rock climbing, experimenting with projects on my
-			Raspberry Pi, and enjoying hikes throughout the Phoenix valleys with my girlfriend. I'm always
-			tinkering with new software and web technologies, driven by a perpetual curiosity to learn and
-			create.
+			Raspberry Pi, and enjoying hikes throughout the Phoenix valleys with my girlfriend. I have a
+			Bachelor's Degree in Biomedical Laboratory Science from Michigan State University, and enjoy
+			rooting for the Spartans during college football basketball seasons.
 		</p>
 		<p>Let's build something together!</p>
 
-		<h3>Here are a few technologies I’ve been working with recently:</h3>
+		<h3>Here are a few technologies I’ve been building with recently:</h3>
 		<ul>
 			<li>TypeScript</li>
 			<li>JavaScript (ES6+)</li>

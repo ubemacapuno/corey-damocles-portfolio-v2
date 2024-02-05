@@ -105,6 +105,7 @@
 		justify-content: space-between;
 		flex-direction: row;
 		gap: var(--gap);
+		padding: 0 var(--gap);
 	}
 
 	@media (max-width: 700px) {
