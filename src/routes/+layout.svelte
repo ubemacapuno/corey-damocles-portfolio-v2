@@ -15,7 +15,7 @@
 		width: 100%;
 	}
 	.page_container {
-		max-width: 900px;
+		max-width: var(--max_page_width);
 		margin: 0 auto;
 	}
 </style>

@@ -81,7 +81,7 @@
 		gap: var(--gap_smallest);
 		padding: var(--gap_largest) var(--gap_smallest);
 		grid-area: topnav;
-		max-width: 900px;
+		max-width: var(--max_page_width);
 		margin: 0 auto;
 	}
 	.github_link {

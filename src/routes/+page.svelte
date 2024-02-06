@@ -25,17 +25,19 @@
 			>
 				Pure Func</a
 			>
-			web development agency as a consulting developer, and further progressed as I became a
-			full-time software engineer at
+			web development agency as a consulting developer, and further progressed as I transitioned to a
+			full-time software engineer role at
 			<a href="https://fastdms.com/" target="_blank" rel="noreferrer noopener">Fast DMS</a> in December
-			2022. Through the applications I develop, I focus on delivering exceptional and accessible user
-			experiences.
+			2022, focusing on crafting accessible user experiences in the contract manufacturing and procurement
+			industry.
 		</p>
 		<p>
-			Outside of work, my passions include rock climbing, experimenting with projects on my
-			Raspberry Pi, and enjoying hikes throughout the Phoenix valleys with my girlfriend. I have a
-			Bachelor's Degree in Biomedical Laboratory Science from Michigan State University, and enjoy
-			rooting for the Spartans during college football basketball seasons.
+			Outside of work, I enjoy rock climbing, tinkering with my Raspberry Pi, and hiking throughout
+			the Phoenix valleys.
+		</p>
+		<p>
+			I have a Bachelor's Degree in Biomedical Laboratory Science from Michigan State University,
+			and enjoy rooting for the Spartans during college football basketball seasons.
 		</p>
 		<p>Let's build something together!</p>
 

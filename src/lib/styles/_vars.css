@@ -71,6 +71,7 @@
 	/* Layout */
 	--card_width: var(--min_width);
 	--max_width: 800px;
+	--max_page_width: 1280px;
 	--max_input_width: 600px;
 	--min_width: 320px;
 	--sidebar_width: calc(var(--gap) * 3);
