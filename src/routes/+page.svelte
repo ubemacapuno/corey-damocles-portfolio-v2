@@ -2,55 +2,57 @@
 </script>
 
 <div class="homepage_container">
-	<h1>Corey Damocles</h1>
-	<h2>Software Engineer at Fast DMS</h2>
+	<div>
+		<h1>Corey Damocles</h1>
+		<h2>Software Engineer at Fast DMS</h2>
 
-	<h3 class="tagline">
-		Utilizing cutting-edge technologies to craft dynamic and streamlined software solutions.
-	</h3>
-</div>
-<div class="about_content">
-	<p>
-		During the COVID-19 pandemic in January 2022, I became interested in leveling up my skills by
-		learning coding and web development. I partnered with fellow developers in the 100Devs
-		community, engaging in hands-on learning through developing websites and applications for agency
-		projects.
-	</p>
-	<p>
-		My career took a leap in April 2022 when I joined the <a
-			href="https://www.purefunc.io/"
-			target="_blank"
-			rel="noreferrer noopener"
-		>
-			Pure Func</a
-		>
-		web development agency as a consulting developer, and further progressed as I transitioned to a full-time
-		software engineer role at
-		<a href="https://fastdms.com/" target="_blank" rel="noreferrer noopener">Fast DMS</a> in December
-		2022, focusing on crafting accessible user experiences in the contract manufacturing and procurement
-		industry.
-	</p>
-	<p>
-		Outside of work, I enjoy rock climbing, tinkering with my Raspberry Pi, and hiking throughout
-		the Phoenix valleys.
-	</p>
-	<p>
-		I have a Bachelor's Degree in Biomedical Laboratory Science from Michigan State University, and
-		enjoy rooting for the Spartans during college football and basketball seasons.
-	</p>
-	<p>Let's build something together!</p>
+		<h3 class="tagline">
+			Utilizing cutting-edge technologies to craft dynamic and streamlined software solutions.
+		</h3>
+	</div>
+	<div class="about_content">
+		<p>
+			During the COVID-19 pandemic in January 2022, I became interested in leveling up my skills by
+			learning coding and web development. I partnered with fellow developers in the 100Devs
+			community, engaging in hands-on learning through developing websites and applications for
+			agency projects.
+		</p>
+		<p>
+			My career took a leap in April 2022 when I joined the <a
+				href="https://www.purefunc.io/"
+				target="_blank"
+				rel="noreferrer noopener"
+			>
+				Pure Func</a
+			>
+			web development agency as a consulting developer, and further progressed as I transitioned to a
+			full-time software engineer role at
+			<a href="https://fastdms.com/" target="_blank" rel="noreferrer noopener">Fast DMS</a> in December
+			2022, focusing on crafting accessible user experiences in the contract manufacturing and procurement
+			industry.
+		</p>
+		<p>
+			Outside of work, I enjoy rock climbing, tinkering with my Raspberry Pi, and hiking throughout
+			the Phoenix valleys.
+		</p>
+		<p>
+			I have a Bachelor's Degree in Biomedical Laboratory Science from Michigan State University,
+			and enjoy rooting for the Spartans during college football and basketball seasons.
+		</p>
+		<p>Let's build something together!</p>
 
-	<h3>Here are a few technologies I’ve been building with recently:</h3>
-	<ul>
-		<li>TypeScript</li>
-		<li>JavaScript (ES6+)</li>
-		<li>Svelte</li>
-		<li>SvelteKit</li>
-		<li>React</li>
-		<li>Python</li>
-		<li>MongoDB</li>
-		<li>Node.js</li>
-	</ul>
+		<h3>Here are a few technologies I’ve been building with recently:</h3>
+		<ul>
+			<li>TypeScript</li>
+			<li>JavaScript (ES6+)</li>
+			<li>Svelte</li>
+			<li>SvelteKit</li>
+			<li>React</li>
+			<li>Python</li>
+			<li>MongoDB</li>
+			<li>Node.js</li>
+		</ul>
+	</div>
 </div>
 
 <style lang="postcss">
@@ -63,7 +65,6 @@
 
 	.about_content {
 		line-height: 1.6;
-		padding: 0 var(--gap_small);
 
 		p {
 			margin-bottom: var(--gap);
