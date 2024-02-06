@@ -12,30 +12,35 @@
 	}
 </script>
 
-<h2>Projects</h2>
-<div class="grid_container">
-	{#each projects as { name, description, stars, forks, updated, src, languages }}
-		<GitHubCard
-			{name}
-			{description}
-			{languages}
-			{stars}
-			{forks}
-			updated={formatDate(updated)}
-			{src}
-		/>
-	{/each}
-</div>
-<div class="button_container">
-	<Button
-		outline
-		target="_blank"
-		rel="noreferrer noopener"
-		href="https://github.com/ubemacapuno?tab=repositories">View More Projects on GitHub</Button
-	>
+<div class="page_container">
+	<h2>Projects</h2>
+	<div class="grid_container">
+		{#each projects as { name, description, stars, forks, updated, src, languages }}
+			<GitHubCard
+				{name}
+				{description}
+				{languages}
+				{stars}
+				{forks}
+				updated={formatDate(updated)}
+				{src}
+			/>
+		{/each}
+	</div>
+	<div class="button_container">
+		<Button
+			outline
+			target="_blank"
+			rel="noreferrer noopener"
+			href="https://github.com/ubemacapuno?tab=repositories">View More Projects on GitHub</Button
+		>
+	</div>
 </div>
 
 <style>
+	.page_container {
+		padding: 0 var(--gap);
+	}
 	.grid_container {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -47,6 +52,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin: var(--gap) 0;
 	}
 
 	@media (max-width: 650px) {

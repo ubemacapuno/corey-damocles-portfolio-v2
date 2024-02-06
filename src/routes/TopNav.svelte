@@ -79,7 +79,7 @@
 		justify-content: space-between;
 		align-items: center;
 		gap: var(--gap_smallest);
-		padding: var(--gap_largest) var(--gap_smallest);
+		padding: var(--gap_largest) var(--gap);
 		grid-area: topnav;
 		max-width: var(--max_page_width);
 		margin: 0 auto;

@@ -53,12 +53,16 @@
 
 <style lang="postcss">
 	.card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		border: 1px solid var(--card_line_color);
 		border-radius: var(--border_radius);
 		padding: var(--gap_small);
 		margin-bottom: var(--gap_small);
 		color: var(--grey_8);
 		font-size: var(--font_normal);
+		height: 100%;
 	}
 
 	a {
@@ -89,7 +93,7 @@
 	}
 
 	.repo_language {
-		margin-bottom: 8px;
+		margin-bottom: var(--gap_small);
 		font-size: var(--font_small);
 
 		span {
