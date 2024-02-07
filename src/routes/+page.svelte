@@ -118,7 +118,7 @@
 		gap: var(--gap_smallest);
 		margin: var(--gap_smallest) var(--gap) var(--gap);
 		overflow: hidden;
-		padding-left: var(--gap_largest);
+		padding-left: var(--gap);
 
 		li::before {
 			content: '>';
