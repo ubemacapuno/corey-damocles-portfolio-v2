@@ -123,19 +123,13 @@
 		}
 	}
 
-	/* Mobile-specific adjustments */
 	@media (max-width: 495px) {
 		.modal_wrapper.fullWidth,
 		.modal_wrapper {
-			margin-left: var(--mobile-gap); /* Adds left margin */
-			margin-right: var(--mobile-gap); /* Adds right margin */
-			width: auto; /* Allows for automatic width adjustment based on margin */
-			max-width: calc(100% - 2 * var(--mobile-gap)); /* Adjusts max-width to account for margins */
+			margin-left: var(--gap);
+			margin-right: var(--gap);
+			width: auto;
+			max-width: calc(100% - 2 * var(--gap));
 		}
-	}
-
-	/* Ensure --mobile-gap is defined */
-	:root {
-		--mobile-gap: 16px; /* Adjust this value to control the space on the sides */
 	}
 </style>

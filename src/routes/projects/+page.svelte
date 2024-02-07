@@ -21,20 +21,37 @@
 		const date = new Date(dateString)
 		return formatDistanceToNow(date, { addSuffix: true })
 	}
+
+	function handleCardClick(projectName: string) {
+		if (projectName === 'chrono-core') {
+			activeModalType = 'projectOne'
+		} else if (projectName === 'svelte-step-bro') {
+			activeModalType = 'projectTwo'
+		} else if (projectName === 'rep-log') {
+			activeModalType = 'projectThree'
+		} else if (projectName === 'foodie-blog-sveltekit') {
+			activeModalType = 'projectFour'
+		} else if (projectName === 'capa-tracker-sveltekit') {
+			activeModalType = 'projectFive'
+		} else if (projectName === 'tortoise-tea-house-site') {
+			activeModalType = 'projectSix'
+		} else {
+			console.log(`No modal type found for: ${projectName}`)
+			activeModalType = null
+		}
+	}
+
+	$: console.log('activeModalType', activeModalType)
 </script>
 
 <div class="page_container">
 	<h2>Projects</h2>
 	<div class="grid_container">
-		{#each projects as { name, description, stars, forks, updated, src, languages }}
+		{#each projects as project}
 			<GitHubCard
-				{name}
-				{description}
-				{languages}
-				{stars}
-				{forks}
-				updated={formatDate(updated)}
-				{src}
+				{...project}
+				updated={formatDate(project.updated)}
+				onClick={() => handleCardClick(project.name)}
 			/>
 		{/each}
 	</div>
@@ -46,11 +63,9 @@
 			href="https://github.com/ubemacapuno?tab=repositories">View More Projects on GitHub</Button
 		>
 	</div>
-	<div class="button_container">
-		<Button on:click={() => (activeModalType = 'projectOne')} outline>Open Modal?!</Button>
-	</div>
 </div>
 
+<!-- TODO: Separate this out and the logic for all the other Repo details into another component -->
 <Modal isModalOpen={!!activeModalType} maxWidth="28rem" onClose={() => (activeModalType = null)}>
 	<GitHubRepoDetails
 		repoLink="https://github.com/ubemacapuno/foodie-blog-sveltekit"
@@ -71,7 +86,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: var(--gap_small);
-		margin: var(--gap_small);
+		padding: var(--gap_small);
 	}
 
 	.button_container {

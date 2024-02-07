@@ -75,9 +75,9 @@
 		color: var(--accent_color);
 	}
 
-	@media (max-width: 1024px) {
+	@media (max-width: 800px) {
 		.homepage_container {
-			grid-template-columns: 1fr;
+			display: block;
 		}
 	}
 
