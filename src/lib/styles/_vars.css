@@ -76,7 +76,7 @@
 	--min_width: 320px;
 	--sidebar_width: calc(var(--gap) * 3);
 	--aside_width: var(--min_width);
-	--nav_height: calc(var(--gap) * 3);
+	--nav_height: calc(var(--gap) * 4.5);
 
 	/* Z-Index */
 	--header_level: 10;

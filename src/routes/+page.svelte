@@ -2,7 +2,7 @@
 </script>
 
 <div class="homepage_container">
-	<div>
+	<div class="header_content">
 		<h1>Corey Damocles</h1>
 		<h2>Software Engineer at Fast DMS</h2>
 
@@ -11,6 +11,7 @@
 		</h3>
 	</div>
 	<div class="about_content">
+		<h3 class="mobile_header">About</h3>
 		<p>
 			During the COVID-19 pandemic in January 2022, I became interested in leveling up my skills by
 			learning coding and web development. I partnered with fellow developers in the 100Devs
@@ -57,27 +58,44 @@
 
 <style lang="postcss">
 	.homepage_container {
-		padding: var(--gap_largest) var(--gap);
+		padding: var(--gap) var(--gap_smallest);
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: var(--gap_large);
+		gap: var(--gap);
 	}
 
 	.about_content {
 		line-height: 1.6;
+
+		.mobile_header {
+			display: none;
+			font-weight: bold;
+		}
 
 		p {
 			margin-bottom: var(--gap);
 		}
 	}
 
+	.about_content,
+	.header_content {
+		padding: var(--gap_small);
+	}
+
 	.tagline {
 		color: var(--accent_color);
+		max-width: 20rem;
 	}
 
 	@media (max-width: 800px) {
 		.homepage_container {
 			display: block;
+		}
+
+		.about_content {
+			.mobile_header {
+				display: block;
+			}
 		}
 	}
 
