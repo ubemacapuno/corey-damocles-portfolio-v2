@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { projectDetails } from '$constants/projectDetails.js'
 	import GitHubCard from '$lib/components/GitHubCard.svelte'
 	import GitHubRepoDetails from '$lib/components/GitHubRepoDetails.svelte'
 	import Modal from '$lib/components/Modal.svelte'
@@ -22,25 +23,12 @@
 		return formatDistanceToNow(date, { addSuffix: true })
 	}
 
+	// Function to handle card click
 	function handleCardClick(projectName: string) {
-		if (projectName === 'chrono-core') {
-			activeModalType = 'projectOne'
-		} else if (projectName === 'svelte-step-bro') {
-			activeModalType = 'projectTwo'
-		} else if (projectName === 'rep-log') {
-			activeModalType = 'projectThree'
-		} else if (projectName === 'foodie-blog-sveltekit') {
-			activeModalType = 'projectFour'
-		} else if (projectName === 'capa-tracker-sveltekit') {
-			activeModalType = 'projectFive'
-		} else if (projectName === 'tortoise-tea-house-site') {
-			activeModalType = 'projectSix'
-		} else {
-			console.log(`No modal type found for: ${projectName}`)
-			activeModalType = null
-		}
+		activeModalType = projectName // Use the project name directly as the key
 	}
 
+	$: activeProjectDetails = projectDetails[activeModalType]
 	$: console.log('activeModalType', activeModalType)
 </script>
 
@@ -67,15 +55,9 @@
 
 <!-- TODO: Separate this out and the logic for all the other Repo details into another component -->
 <Modal isModalOpen={!!activeModalType} maxWidth="28rem" onClose={() => (activeModalType = null)}>
-	<GitHubRepoDetails
-		repoLink="https://github.com/ubemacapuno/foodie-blog-sveltekit"
-		demoLink="https://foodie-blog-sveltekit.vercel.app/"
-		description="<p>This SvelteKit application is a unique platform for saving and rating recipes. It combines a MongoDB backend with SvelteKit form actions for recipe management, and features an AI-powered chatbot assistant using OpenAI's API. Authjs is integrated for secure and efficient user authentication.</p>
-
-	<p>In a world where recipe websites are more cluttered than a spice drawer, my quest for a simple chicken noodle soup recipe led me to create this web app. Because let's face it, we're here to cook, not to scroll through popup ads and a needless life-story just for SEO and a word-count quota (that does nothing but cause pain for the user).</p>"
-		image="/images/foodie-blog.jpg"
-		title="Foodie Blog"
-	/>
+	{#if activeProjectDetails}
+		<GitHubRepoDetails {...activeProjectDetails} />
+	{/if}
 </Modal>
 
 <style>
