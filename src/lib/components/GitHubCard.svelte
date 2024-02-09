@@ -91,6 +91,7 @@
 	.repo_language {
 		margin-bottom: var(--gap_small);
 		font-size: var(--font_small);
+		text-wrap: nowrap;
 
 		span {
 			color: var(--text_color);

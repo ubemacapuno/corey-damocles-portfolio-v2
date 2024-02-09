@@ -9,14 +9,16 @@
 
 	$: projects = data?.projects || []
 
-	let activeModalType:
+	type ActiveModalType =
 		| null
 		| 'projectOne'
 		| 'projectTwo'
 		| 'projectThree'
 		| 'projectFour'
 		| 'projectFive'
-		| 'projectSix' = null
+		| 'projectSix'
+
+	let activeModalType: ActiveModalType = null
 
 	const formatDate = (dateString: string) => {
 		const date = new Date(dateString)
@@ -24,12 +26,11 @@
 	}
 
 	// Function to handle card click
-	function handleCardClick(projectName: string) {
-		activeModalType = projectName // Use the project name directly as the key
+	function handleCardClick(projectName: ActiveModalType) {
+		activeModalType = projectName
 	}
 
 	$: activeProjectDetails = projectDetails[activeModalType]
-	$: console.log('activeModalType', activeModalType)
 </script>
 
 <div class="page_container">
@@ -53,8 +54,7 @@
 	</div>
 </div>
 
-<!-- TODO: Separate this out and the logic for all the other Repo details into another component -->
-<Modal isModalOpen={!!activeModalType} maxWidth="28rem" onClose={() => (activeModalType = null)}>
+<Modal isModalOpen={!!activeModalType} maxWidth="90vw" onClose={() => (activeModalType = null)}>
 	{#if activeProjectDetails}
 		<GitHubRepoDetails {...activeProjectDetails} />
 	{/if}

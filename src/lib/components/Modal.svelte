@@ -68,8 +68,6 @@
 		margin: 0 auto;
 		min-width: 200px;
 		position: fixed;
-		max-width: 100%;
-		width: auto;
 		padding: 0 var(--gap);
 		z-index: var(--modal_level);
 		height: auto;

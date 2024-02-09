@@ -10,6 +10,6 @@
 	export let title: string
 </script>
 
-<Modal isModalOpen={!!activeModalType} maxWidth="28rem" onClose={() => (activeModalType = null)}>
+<Modal isModalOpen={!!activeModalType} maxWidth="90vw" onClose={() => (activeModalType = null)}>
 	<GitHubRepoDetails {repoLink} {demoLink} {description} {image} {title} />
 </Modal>
