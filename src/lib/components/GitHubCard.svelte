@@ -9,14 +9,13 @@
 	export let stars = 0
 	export let forks = 0
 	export let updated: string
+	export let onClick: () => void
 </script>
 
 <div class="card">
-	<h3 class="repo_name">
-		<a href={src} target="_blank" rel="noreferrer noopener">
-			{name}
-		</a>
-	</h3>
+	<button class="repo_name" on:click={onClick}>
+		{name}
+	</button>
 	<div class="repo_description">{description}</div>
 	<div class="language_container">
 		{#each languages as { language, color }, i}
@@ -53,27 +52,28 @@
 
 <style lang="postcss">
 	.card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		border: 1px solid var(--card_line_color);
 		border-radius: var(--border_radius);
 		padding: var(--gap_small);
 		margin-bottom: var(--gap_small);
 		color: var(--grey_8);
 		font-size: var(--font_normal);
+		height: 100%;
 	}
 
-	a {
-		color: var(--teal);
+	.repo_name {
+		color: var(--secondary_color);
 		transition: var(--transition_speed) ease-in-out;
 		font-size: var(--font_large);
+		margin: 0 0 var(--gap) 0;
+		text-align: left;
 
 		&:hover {
 			color: var(--primary_hover_color);
 		}
-	}
-
-	.repo_name {
-		color: var(--primary_color);
-		margin: 0 0 8px 0;
 	}
 
 	.repo_description {
@@ -89,8 +89,9 @@
 	}
 
 	.repo_language {
-		margin-bottom: 8px;
+		margin-bottom: var(--gap_small);
 		font-size: var(--font_small);
+		text-wrap: nowrap;
 
 		span {
 			color: var(--text_color);

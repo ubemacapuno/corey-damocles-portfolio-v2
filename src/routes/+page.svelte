@@ -1,16 +1,19 @@
 <script lang="ts">
+	import SocialLinks from '$lib/components/SocialLinks.svelte'
 </script>
 
 <div class="homepage_container">
-	<div class="">
+	<div class="header_content">
 		<h1>Corey Damocles</h1>
 		<h2>Software Engineer at Fast DMS</h2>
 
-		<h3 class="subtext">
+		<h3 class="tagline">
 			Utilizing cutting-edge technologies to craft dynamic and streamlined software solutions.
 		</h3>
+		<SocialLinks />
 	</div>
-	<div>
+	<div class="about_content">
+		<h5 class="mobile_header uppercase">About</h5>
 		<p>
 			During the COVID-19 pandemic in January 2022, I became interested in leveling up my skills by
 			learning coding and web development. I partnered with fellow developers in the 100Devs
@@ -37,7 +40,7 @@
 		</p>
 		<p>
 			I have a Bachelor's Degree in Biomedical Laboratory Science from Michigan State University,
-			and enjoy rooting for the Spartans during college football basketball seasons.
+			and enjoy rooting for the Spartans during college football and basketball seasons.
 		</p>
 		<p>Let's build something together!</p>
 
@@ -57,15 +60,45 @@
 
 <style lang="postcss">
 	.homepage_container {
-		padding: var(--gap_largest) var(--gap_smallest);
+		padding: var(--gap) var(--gap_smallest);
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: var(--gap_large);
+		gap: var(--gap);
 	}
 
-	@media (max-width: 1024px) {
+	.about_content {
+		line-height: 1.6;
+
+		.mobile_header {
+			display: none;
+			font-weight: bold;
+		}
+
+		p {
+			margin-bottom: var(--gap);
+		}
+	}
+
+	.about_content,
+	.header_content {
+		padding: var(--gap_small);
+	}
+
+	.tagline {
+		color: var(--accent_color);
+		max-width: 20rem;
+	}
+
+	@media (max-width: 800px) {
 		.homepage_container {
-			grid-template-columns: 1fr;
+			display: block;
+		}
+
+		.about_content {
+			margin-top: var(--gap_large);
+			.mobile_header {
+				display: block;
+			}
 		}
 	}
 
@@ -81,12 +114,19 @@
 		margin: 0;
 	}
 
-	h3 {
+	h5 {
 		color: var(--primary_color);
 	}
 
-	.subtext {
-		color: var(--subtext_color);
+	a {
+		color: var(--link_color);
+		text-decoration: none;
+		transition: var(--transition_speed) ease-in-out color;
+
+		&:hover {
+			color: var(--primary_hover_color);
+			cursor: pointer;
+		}
 	}
 
 	p {
@@ -97,9 +137,9 @@
 		display: grid;
 		grid-template-columns: repeat(2, minmax(140px, 200px));
 		gap: var(--gap_smallest);
-		margin: var(--gap_smallest) 0 0;
+		margin: var(--gap_smallest) var(--gap) var(--gap);
 		overflow: hidden;
-		padding-left: 1.8rem;
+		padding-left: var(--gap);
 
 		li::before {
 			content: '>';

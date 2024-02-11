@@ -38,7 +38,7 @@
 	--purple: #b17df0;
 	--purple_light: #d3a5ff;
 	--purple_a: #b17df04a;
-	--pink: #e15fed;
+	--pink: #e383ec;
 	--pink_light: #f2c3ff;
 	--pink_a: #e15fed4a;
 	--teal: #00b8d4;
@@ -76,7 +76,7 @@
 	--min_width: 320px;
 	--sidebar_width: calc(var(--gap) * 3);
 	--aside_width: var(--min_width);
-	--nav_height: calc(var(--gap) * 3);
+	--nav_height: calc(var(--gap) * 4.5);
 
 	/* Z-Index */
 	--header_level: 10;
@@ -109,9 +109,11 @@ body {
 	--placeholder_color: var(--grey_7);
 	--disabled_color: var(--grey_6);
 	--primary_color: var(--purple);
+	--link_color: var(--teal);
 	--primary_hover_color: var(--teal_light);
 	--primary_active_color: var(--purple_a);
 	--secondary_color: var(--teal);
+	--accent_color: var(--teal_light);
 	/* Status */
 	--warning_color: var(--red);
 	--warning_active_color: var(--red_a);

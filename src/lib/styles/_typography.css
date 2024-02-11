@@ -121,3 +121,7 @@ td a:hover {
 	display: inline-flex;
 	gap: var(--gap_largest);
 }
+
+.uppercase {
+	text-transform: uppercase;
+}
