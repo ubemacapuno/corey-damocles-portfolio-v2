@@ -1,4 +1,5 @@
 <script lang="ts">
+	import SocialLinks from '$lib/components/SocialLinks.svelte'
 </script>
 
 <div class="homepage_container">
@@ -9,9 +10,10 @@
 		<h3 class="tagline">
 			Utilizing cutting-edge technologies to craft dynamic and streamlined software solutions.
 		</h3>
+		<SocialLinks />
 	</div>
 	<div class="about_content">
-		<h3 class="mobile_header">About</h3>
+		<h5 class="mobile_header uppercase">About</h5>
 		<p>
 			During the COVID-19 pandemic in January 2022, I became interested in leveling up my skills by
 			learning coding and web development. I partnered with fellow developers in the 100Devs
@@ -93,6 +95,7 @@
 		}
 
 		.about_content {
+			margin-top: var(--gap_large);
 			.mobile_header {
 				display: block;
 			}
@@ -111,7 +114,7 @@
 		margin: 0;
 	}
 
-	h3 {
+	h5 {
 		color: var(--primary_color);
 	}
 
