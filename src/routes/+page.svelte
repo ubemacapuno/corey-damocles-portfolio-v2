@@ -1,5 +1,7 @@
 <script lang="ts">
+	import ResumeCards from '$lib/components/ResumeCards.svelte'
 	import SocialLinks from '$lib/components/SocialLinks.svelte'
+	import Tag from '$lib/components/Tag.svelte'
 </script>
 
 <div class="homepage_container">
@@ -55,6 +57,10 @@
 			<li>MongoDB</li>
 			<li>Node.js</li>
 		</ul>
+		<div>
+			<h5 class="mobile_header uppercase">Experience</h5>
+			<ResumeCards />
+		</div>
 	</div>
 </div>
 

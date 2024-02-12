@@ -105,6 +105,7 @@ body {
 	--button_border_color: var(--grey_a_2);
 	--subtext_color: var(--grey_7);
 	--title_color: var(--white_2);
+	--tag_text_color: var(--white_2);
 	--text_color: var(--grey_9);
 	--placeholder_color: var(--grey_7);
 	--disabled_color: var(--grey_6);

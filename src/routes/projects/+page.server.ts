@@ -1,4 +1,3 @@
-import { repoResponse } from '$constants/repos'
 import type { PageServerLoad } from './$types'
 
 export const load: PageServerLoad = async () => {
@@ -46,24 +45,21 @@ export const load: PageServerLoad = async () => {
 		]
 	}
 
-	// TODO: Re-incorporate fetch. Using fake data for now!
+	const fetchRepoDetails = async (repoName: string) => {
+		const apiUrl = `https://api.github.com/repos/${username}/${repoName}`
+		const headers = {
+			Authorization: `token ${import.meta.env.VITE_GITHUB_TOKEN}`
+		}
+		const response = await fetch(apiUrl, { headers })
+		if (!response.ok) {
+			throw new Error(`Failed to fetch repo ${repoName}: ${response.statusText}`)
+		}
+		return response.json()
+	}
 
-	// const fetchRepoDetails = async (repoName: string) => {
-	// 	const apiUrl = `https://api.github.com/repos/${username}/${repoName}`
-	// 	const headers = {
-	// 		Authorization: `token ${import.meta.env.VITE_GITHUB_TOKEN}`
-	// 	}
-	// 	const response = await fetch(apiUrl, { headers })
-	// 	if (!response.ok) {
-	// 		throw new Error(`Failed to fetch repo ${repoName}: ${response.statusText}`)
-	// 	}
-	// 	return response.json()
-	// }
-
-	const repos = repoResponse
-	// const repoDetailsPromises = repoNames.map(fetchRepoDetails)
-	// const repos = await Promise.all(repoDetailsPromises)
-	// console.log('REPOS!!: ', repos)
+	const repoDetailsPromises = repoNames.map(fetchRepoDetails)
+	const repos = await Promise.all(repoDetailsPromises)
+	console.log('REPOS!!: ', repos)
 
 	const projects = repos.map((repo) => ({
 		name: repo.name,
