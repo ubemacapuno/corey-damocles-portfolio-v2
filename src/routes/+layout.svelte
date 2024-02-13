@@ -3,8 +3,8 @@
 	import TopNav from './TopNav.svelte'
 </script>
 
-<TopNav />
 <main>
+	<TopNav />
 	<div class="page_container">
 		<slot />
 	</div>

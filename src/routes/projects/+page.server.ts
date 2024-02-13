@@ -54,23 +54,20 @@ export const load: PageServerLoad = async () => {
 		if (!response.ok) {
 			throw new Error(`Failed to fetch repo ${repoName}: ${response.statusText}`)
 		}
-		return response.json()
+		return await response.json()
 	}
 
-	const repoDetailsPromises = repoNames.map(fetchRepoDetails)
-	const repos = await Promise.all(repoDetailsPromises)
-	console.log('REPOS!!: ', repos)
-
-	const projects = repos.map((repo) => ({
-		name: repo.name,
-		description: repo.description,
-		languages: repoLanguages[repo.name as keyof typeof repoLanguages],
-		stars: repo.stargazers_count,
-		forks: repo.forks_count,
-		updated: new Date(repo.pushed_at).toLocaleDateString(),
-		src: repo.html_url
-	}))
 	return {
-		projects
+		projects: await Promise.all(repoNames.map(fetchRepoDetails)).then((repos) =>
+			repos.map((repo) => ({
+				name: repo.name,
+				description: repo.description,
+				languages: repoLanguages[repo.name as keyof typeof repoLanguages],
+				stars: repo.stargazers_count,
+				forks: repo.forks_count,
+				updated: new Date(repo.pushed_at).toLocaleDateString(),
+				src: repo.html_url
+			}))
+		)
 	}
 }

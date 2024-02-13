@@ -3,7 +3,7 @@
 
 	// Choose to pass either an 'accent' or a 'color' prop
 	export let accent: Extract<Accent, Status | Theme> | 'disabled' = 'primary'
-	export let color: string | null = 'var(--primary_color)'
+	export let color: string | null = null
 	export let size: FontSize = 'small'
 </script>
 

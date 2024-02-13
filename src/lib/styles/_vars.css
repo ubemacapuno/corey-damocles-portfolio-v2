@@ -42,7 +42,7 @@
 	--pink_light: #f2c3ff;
 	--pink_a: #e15fed4a;
 	--teal: #00b8d4;
-	--teal_a: #00b8d44a;
+	--teal_a: #00b8d48c;
 	--teal_light: #9af2ff;
 
 	/* GitHub Language Colors */
@@ -71,7 +71,7 @@
 	/* Layout */
 	--card_width: var(--min_width);
 	--max_width: 800px;
-	--max_page_width: 1280px;
+	--max_page_width: 1024px;
 	--max_input_width: 600px;
 	--min_width: 320px;
 	--sidebar_width: calc(var(--gap) * 3);
@@ -105,7 +105,7 @@ body {
 	--button_border_color: var(--grey_a_2);
 	--subtext_color: var(--grey_7);
 	--title_color: var(--white_2);
-	--tag_text_color: var(--white_2);
+	--tag_text_color: var(--white);
 	--text_color: var(--grey_9);
 	--placeholder_color: var(--grey_7);
 	--disabled_color: var(--grey_6);
@@ -114,6 +114,7 @@ body {
 	--primary_hover_color: var(--teal_light);
 	--primary_active_color: var(--purple_a);
 	--secondary_color: var(--teal);
+	--tertiary_color: var(--teal_a);
 	--accent_color: var(--teal_light);
 	/* Status */
 	--warning_color: var(--red);

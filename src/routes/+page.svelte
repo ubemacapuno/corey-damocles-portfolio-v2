@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ResumeCards from '$lib/components/ResumeCards.svelte'
+	import ResumeDetails from '$lib/components/ResumeDetails.svelte'
 	import SocialLinks from '$lib/components/SocialLinks.svelte'
 	import Tag from '$lib/components/Tag.svelte'
 </script>
@@ -14,7 +14,7 @@
 		</h3>
 		<SocialLinks />
 	</div>
-	<div class="about_content">
+	<div class="main_content">
 		<h5 class="mobile_header uppercase">About</h5>
 		<p>
 			During the COVID-19 pandemic in January 2022, I became interested in leveling up my skills by
@@ -37,8 +37,16 @@
 			industry.
 		</p>
 		<p>
-			Outside of work, I enjoy rock climbing, tinkering with my Raspberry Pi, and hiking throughout
-			the Phoenix valleys.
+			Outside of work, I enjoy rock climbing, tinkering with my Raspberry Pi, hiking throughout the
+			Phoenix valleys, and meeting up with the local developer community at <a
+				href="https://www.meetup.com/phoenix-javascript/"
+				target="_blank"
+				rel="noreferrer noopener">Phoenix JavaScript</a
+			>
+			and
+			<a href="https://www.meetup.com/phoenix-reactjs/" target="_blank" rel="noreferrer noopener"
+				>Phoenix ReactJS</a
+			> meetups.
 		</p>
 		<p>
 			I have a Bachelor's Degree in Biomedical Laboratory Science from Michigan State University,
@@ -57,9 +65,9 @@
 			<li>MongoDB</li>
 			<li>Node.js</li>
 		</ul>
-		<div>
+		<div class="experience_content">
 			<h5 class="mobile_header uppercase">Experience</h5>
-			<ResumeCards />
+			<ResumeDetails />
 		</div>
 	</div>
 </div>
@@ -69,10 +77,9 @@
 		padding: var(--gap) var(--gap_smallest);
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: var(--gap);
 	}
 
-	.about_content {
+	.main_content {
 		line-height: 1.6;
 
 		.mobile_header {
@@ -80,12 +87,16 @@
 			font-weight: bold;
 		}
 
+		.experience_content {
+			margin-top: calc(var(--gap_largest) * 2);
+		}
+
 		p {
 			margin-bottom: var(--gap);
 		}
 	}
 
-	.about_content,
+	.main_content,
 	.header_content {
 		padding: var(--gap_small);
 	}
@@ -95,12 +106,12 @@
 		max-width: 20rem;
 	}
 
-	@media (max-width: 800px) {
+	@media (max-width: 1024px) {
 		.homepage_container {
 			display: block;
 		}
 
-		.about_content {
+		.main_content {
 			margin-top: var(--gap_large);
 			.mobile_header {
 				display: block;

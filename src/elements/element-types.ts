@@ -14,7 +14,7 @@ export type GapSize = 'normal' | 'large' | 'largest' | 'small' | 'smallest' | 'x
 // Theme
 export type Status = 'info' | 'warning' | 'caution' | 'success'
 export type Text = 'text' | 'subtext' | 'title'
-export type Theme = 'primary' | 'secondary'
+export type Theme = 'primary' | 'secondary' | 'tertiary'
 export type Accent = Status | Text | Theme
 
 // Icons (from Material UI)

@@ -17,12 +17,11 @@
 				<h5>{years}</h5>
 			</div>
 			<div class="right">
-				<h3>{company_name}</h3>
-				<h5>{role}</h5>
+				<h3>{role} - {company_name}</h3>
 				<p>{summary}</p>
 				<div class="tags">
 					{#each tags as tag}
-						<Tag>{tag}</Tag>
+						<Tag accent="tertiary">{tag}</Tag>
 					{/each}
 				</div>
 			</div>
@@ -31,28 +30,33 @@
 </div>
 
 <style lang="postcss">
-	.card_container {
-		display: flex;
-		gap: var(--gap_small);
-		justify-content: space-between;
-		align-items: center;
+	h3 {
+		color: var(--primary_color);
+	}
+
+	.cards_container {
+		padding: var(--gap_largest) var(--gap_largest) var(--gap_largest) 0;
 	}
 
 	.card {
 		display: flex;
 		gap: var(--gap_small);
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 	}
 
-	.left,
+	.left {
+		flex: 0 0 25%;
+	}
+
 	.right {
-		flex: 1;
+		flex: 0 0 75%;
 	}
 
 	.tags {
+		margin-top: var(--gap);
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--gap_xsmall); /* Adjust gap between tags as needed */
+		gap: var(--gap_small);
 	}
 </style>
