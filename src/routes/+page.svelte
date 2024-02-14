@@ -1,71 +1,125 @@
 <script lang="ts">
 	import ResumeDetails from '$lib/components/ResumeDetails.svelte'
+	import ScrollButton from '$lib/components/ScrollButton.svelte'
 	import SocialLinks from '$lib/components/SocialLinks.svelte'
-	import Tag from '$lib/components/Tag.svelte'
+
+	let title = 'Corey Damocles | Projects'
+
+	let aboutInView = false
+	let experienceInView = false
+
+	onMount(() => {
+		const aboutElement = document.getElementById('about')
+		const experienceElement = document.getElementById('experience')
+
+		if (aboutElement && experienceElement) {
+			const options = {
+				root: null,
+				rootMargin: '0px',
+				threshold: 0.1
+			}
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					const { target, isIntersecting } = entry
+					if (target.id === 'about') {
+						aboutInView = isIntersecting
+						experienceInView = !isIntersecting
+					} else if (target.id === 'experience') {
+						experienceInView = isIntersecting
+						aboutInView = !isIntersecting
+					}
+				})
+			}, options)
+
+			observer.observe(aboutElement)
+			observer.observe(experienceElement)
+
+			return () => {
+				observer.disconnect()
+			}
+		}
+	})
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+</svelte:head>
 
 <div class="homepage_container">
 	<div class="header_content">
-		<h1>Corey Damocles</h1>
-		<h2>Software Engineer at Fast DMS</h2>
+		<div>
+			<h1>Corey Damocles</h1>
+			<h2>Software Engineer at Fast DMS</h2>
 
-		<h3 class="tagline">
-			Utilizing cutting-edge technologies to craft dynamic and streamlined software solutions.
-		</h3>
-		<SocialLinks />
+			<h3 class="tagline">
+				Utilizing cutting-edge technologies to craft dynamic and streamlined software solutions.
+			</h3>
+		</div>
+
+		<div class="scroll_button_wrapper">
+			<ScrollButton targetId={'about'} isActive={aboutInView} />
+			<ScrollButton targetId="experience" isActive={experienceInView} />
+		</div>
+
+		<div>
+			<SocialLinks />
+		</div>
 	</div>
 	<div class="main_content">
-		<h5 class="mobile_header uppercase">About</h5>
-		<p>
-			During the COVID-19 pandemic in January 2022, I became interested in leveling up my skills by
-			learning coding and web development. I partnered with fellow developers in the 100Devs
-			community, engaging in hands-on learning through developing websites and applications for
-			agency projects.
-		</p>
-		<p>
-			My career took a leap in April 2022 when I joined the <a
-				href="https://www.purefunc.io/"
-				target="_blank"
-				rel="noreferrer noopener"
-			>
-				Pure Func</a
-			>
-			web development agency as a consulting developer, and further progressed as I transitioned to a
-			full-time software engineer role at
-			<a href="https://fastdms.com/" target="_blank" rel="noreferrer noopener">Fast DMS</a> in December
-			2022, focusing on crafting accessible user experiences in the contract manufacturing and procurement
-			industry.
-		</p>
-		<p>
-			Outside of work, I enjoy rock climbing, tinkering with my Raspberry Pi, hiking throughout the
-			Phoenix valleys, and meeting up with the local developer community at <a
-				href="https://www.meetup.com/phoenix-javascript/"
-				target="_blank"
-				rel="noreferrer noopener">Phoenix JavaScript</a
-			>
-			and
-			<a href="https://www.meetup.com/phoenix-reactjs/" target="_blank" rel="noreferrer noopener"
-				>Phoenix ReactJS</a
-			> meetups.
-		</p>
-		<p>
-			I have a Bachelor's Degree in Biomedical Laboratory Science from Michigan State University,
-			and enjoy rooting for the Spartans during college football and basketball seasons.
-		</p>
-		<p>Let's build something together!</p>
+		<div id="about">
+			<h5 class="mobile_header uppercase">About</h5>
+			<p>
+				During the COVID-19 pandemic in January 2022, I became interested in leveling up my skills
+				by learning coding and web development. I partnered with fellow developers in the 100Devs
+				community, engaging in hands-on learning through developing websites and applications for
+				agency projects.
+			</p>
+			<p>
+				My career took a leap in April 2022 when I joined the <a
+					href="https://www.purefunc.io/"
+					target="_blank"
+					rel="noreferrer noopener"
+				>
+					Pure Func</a
+				>
+				web development agency as a consulting developer, and further progressed as I transitioned to
+				a full-time software engineer role at
+				<a href="https://fastdms.com/" target="_blank" rel="noreferrer noopener">Fast DMS</a> in December
+				2022, focusing on crafting accessible user experiences in the contract manufacturing and procurement
+				industry.
+			</p>
+			<p>
+				Outside of work, I enjoy rock climbing, tinkering with my Raspberry Pi, hiking throughout
+				the Phoenix valleys, and networking with the local developer community at <a
+					href="https://www.meetup.com/phoenix-javascript/"
+					target="_blank"
+					rel="noreferrer noopener">Phoenix JavaScript</a
+				>
+				and
+				<a href="https://www.meetup.com/phoenix-reactjs/" target="_blank" rel="noreferrer noopener"
+					>Phoenix ReactJS</a
+				> events.
+			</p>
+			<p>
+				I have a Bachelor's Degree in Biomedical Laboratory Science from Michigan State University,
+				and enjoy rooting for the Spartans during college football and basketball seasons.
+			</p>
+			<p>Let's build something together!</p>
 
-		<h3>Here are a few technologies I’ve been building with recently:</h3>
-		<ul>
-			<li>TypeScript</li>
-			<li>JavaScript (ES6+)</li>
-			<li>Svelte</li>
-			<li>SvelteKit</li>
-			<li>React</li>
-			<li>Python</li>
-			<li>MongoDB</li>
-			<li>Node.js</li>
-		</ul>
-		<div class="experience_content">
+			<h3>Here are a few technologies I’ve been building with recently:</h3>
+			<ul>
+				<li>TypeScript</li>
+				<li>JavaScript (ES6+)</li>
+				<li>Svelte</li>
+				<li>SvelteKit</li>
+				<li>React</li>
+				<li>Python</li>
+				<li>MongoDB</li>
+				<li>Node.js</li>
+			</ul>
+		</div>
+		<div class="experience_content" id="experience">
 			<h5 class="mobile_header uppercase">Experience</h5>
 			<ResumeDetails />
 		</div>
@@ -77,6 +131,27 @@
 		padding: var(--gap) var(--gap_smallest);
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+	}
+
+	.header_content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: -webkit-sticky; /* Safari */
+		position: sticky;
+		top: calc(var(--nav_height) + var(--gap));
+		z-index: var(--header_level);
+		padding: var(--gap_small);
+		max-height: 650px;
+
+		.scroll_button_wrapper {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			gap: var(--gap);
+			margin-top: var(--gap);
+		}
 	}
 
 	.main_content {
@@ -109,6 +184,15 @@
 	@media (max-width: 1024px) {
 		.homepage_container {
 			display: block;
+
+			.header_content {
+				position: relative;
+				top: 0;
+
+				.scroll_button_wrapper {
+					display: none;
+				}
+			}
 		}
 
 		.main_content {

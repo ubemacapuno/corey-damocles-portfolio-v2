@@ -8,6 +8,8 @@
 
 	export let data
 
+	let title = 'Corey Damocles | Projects'
+
 	type ActiveModalType =
 		| null
 		| 'projectOne'
@@ -31,6 +33,10 @@
 
 	$: activeProjectDetails = projectDetails[activeModalType]
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+</svelte:head>
 
 {#await data.projects}
 	<div class="loader_container">
@@ -68,6 +74,9 @@
 </Modal>
 
 <style lang="postcss">
+	h2 {
+		color: var(--primary_color);
+	}
 	.page_container {
 		padding: 0 var(--gap);
 	}

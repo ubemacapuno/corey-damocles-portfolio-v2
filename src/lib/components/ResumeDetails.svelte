@@ -59,4 +59,10 @@
 		flex-wrap: wrap;
 		gap: var(--gap_small);
 	}
+
+	@media (max-width: 1024px) {
+		.cards_container {
+			padding: 0 var(--gap_largest) var(--gap_largest) 0;
+		}
+	}
 </style>

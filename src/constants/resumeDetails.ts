@@ -14,8 +14,8 @@ export const resumeDetails = [
 			'AWS',
 			'Docker',
 			'Unit & E2E Tests',
-			'HTML & PostCSS',
-			'Three.js (3D Modeling)'
+			'HTML & (Post)CSS',
+			'Three.js'
 		]
 	},
 	{
@@ -34,10 +34,12 @@ export const resumeDetails = [
 			'As a QA Specialist in the medical device sector, I ensured products met FDA 21 CFR 820 standards. I led QMS data analysis and reporting using Power BI and Excel to develop interactice dashboards. I helped reduce nonconformances by 25% in 2021, saving over $500,000 annually in scrap and rework costs. I participated in Warehouse Management System (WMS) software qualifications and coordinated CAPA and nonconformance reports, reviewing change control to assess QMS risks.',
 		tags: [
 			'Oracle EBS',
-			'Microsoft Power BI',
+			'QA Review',
 			'Software Validation',
+			'Microsoft Power BI',
 			'WMS Implementation',
 			'HighJump Software',
+			'CAPA & Nonconformance',
 			'FDA 21 CFR 820'
 		]
 	},

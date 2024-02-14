@@ -3,7 +3,7 @@
 </script>
 
 <div class="link_container">
-	<ToolTip content="Visit GitHub" placement="bottom">
+	<ToolTip content=" GitHub" placement="bottom">
 		<a
 			class="social_link"
 			rel="noreferrer noopener"
@@ -23,7 +23,7 @@
 			</svg>
 		</a>
 	</ToolTip>
-	<ToolTip content="Visit LinkedIn" placement="bottom">
+	<ToolTip content=" LinkedIn" placement="bottom">
 		<a
 			class="social_link"
 			rel="noreferrer noopener"
@@ -43,7 +43,7 @@
 			>
 		</a>
 	</ToolTip>
-	<ToolTip content="Visit Twitter" placement="bottom">
+	<ToolTip content=" Twitter" placement="bottom">
 		<a
 			class="twitter_link"
 			rel="noreferrer noopener"
@@ -63,7 +63,7 @@
 			>
 		</a>
 	</ToolTip>
-	<ToolTip content="Visit Codepen" placement="bottom">
+	<ToolTip content=" Codepen" placement="bottom">
 		<a
 			class="social_link"
 			rel="noreferrer noopener"

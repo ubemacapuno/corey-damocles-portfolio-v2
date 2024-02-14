@@ -16,7 +16,7 @@ export const load: PageServerLoad = async () => {
 		'svelte-step-bro': [
 			{ language: 'Svelte', color: 'var(--svelte)' },
 			{ language: 'TypeScript', color: 'var(--typescript)' },
-			{ language: 'CSS', color: 'var(--css)' }
+			{ language: 'PostCSS', color: 'var(--postcss)' }
 		],
 		'chrono-core': [
 			{ language: 'React', color: 'var(--react)' },

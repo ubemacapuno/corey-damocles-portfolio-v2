@@ -35,7 +35,7 @@
 					</MenuItem>
 				</ToolTip>
 			{/each}
-			<ToolTip content="Visit GitHub">
+			<ToolTip content=" GitHub">
 				<a
 					class="github_link"
 					rel="noreferrer noopener"
@@ -61,6 +61,10 @@
 
 <style>
 	nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
 		border-bottom: 0.5px solid var(--secondary_line_color);
 		background-color: var(--sheet_color);
 	}
@@ -81,6 +85,7 @@
 		gap: var(--gap_smallest);
 		padding: var(--gap_largest) var(--gap);
 		grid-area: topnav;
+		width: var(--max_page_width);
 	}
 	.github_link {
 		display: inline-block;
