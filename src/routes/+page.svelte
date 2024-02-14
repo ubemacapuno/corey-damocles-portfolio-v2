@@ -215,6 +215,10 @@
 		margin: 0;
 	}
 
+	h3 {
+		color: var(--accent_color);
+	}
+
 	h5 {
 		color: var(--primary_color);
 	}

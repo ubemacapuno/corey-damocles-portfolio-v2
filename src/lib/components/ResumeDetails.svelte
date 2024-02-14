@@ -11,10 +11,13 @@
 </script>
 
 <div class="cards_container">
-	{#each resumeDetails as { company_name, years, role, summary, tags }}
+	{#each resumeDetails as { company_name, start, end, role, summary, tags }}
 		<div class="card">
 			<div class="left">
-				<h5>{years}</h5>
+				<h5>
+					{start} -<br />
+					{end}
+				</h5>
 			</div>
 			<div class="right">
 				<h3>{role} - {company_name}</h3>
