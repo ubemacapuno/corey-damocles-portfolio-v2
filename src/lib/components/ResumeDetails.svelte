@@ -36,13 +36,14 @@
 
 	.cards_container {
 		padding: var(--gap_largest) var(--gap_largest) var(--gap_largest) 0;
-	}
 
-	.card {
-		display: flex;
-		gap: var(--gap_small);
-		justify-content: space-between;
-		align-items: flex-start;
+		.card {
+			display: flex;
+			gap: var(--gap_small);
+			justify-content: space-between;
+			align-items: flex-start;
+			margin-bottom: var(--gap_largest);
+		}
 	}
 
 	.left {

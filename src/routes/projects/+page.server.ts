@@ -14,34 +14,34 @@ export const load: PageServerLoad = async () => {
 	// mapping of repo names to their languages
 	const repoLanguages = {
 		'svelte-step-bro': [
-			{ language: 'Svelte', color: 'var(--svelte)' },
 			{ language: 'TypeScript', color: 'var(--typescript)' },
+			{ language: 'Svelte', color: 'var(--svelte)' },
 			{ language: 'PostCSS', color: 'var(--postcss)' }
 		],
 		'chrono-core': [
-			{ language: 'React', color: 'var(--react)' },
 			{ language: 'TypeScript', color: 'var(--typescript)' },
 			{ language: 'Python', color: 'var(--python)' },
+			{ language: 'React', color: 'var(--react)' },
 			{ language: 'CSS', color: 'var(--css)' }
 		],
 		'foodie-blog-sveltekit': [
-			{ language: 'Svelte', color: 'var(--svelte)' },
 			{ language: 'TypeScript', color: 'var(--typescript)' },
-			{ language: 'CSS', color: 'var(--css)' }
+			{ language: 'Svelte', color: 'var(--svelte)' },
+			{ language: 'Tailwind CSS', color: 'var(--tailwindcss)' }
 		],
 		'rep-log': [
-			{ language: 'React', color: 'var(--react)' },
 			{ language: 'TypeScript', color: 'var(--typescript)' },
-			{ language: 'CSS', color: 'var(--css)' }
+			{ language: 'React', color: 'var(--react)' },
+			{ language: 'Tailwind CSS', color: 'var(--tailwindcss)' }
 		],
 		'tortoise-tea-house-site': [
 			{ language: 'Svelte', color: 'var(--svelte)' },
 			{ language: 'CSS', color: 'var(--css)' }
 		],
 		'capa-tracker-sveltekit': [
-			{ language: 'Svelte', color: 'var(--svelte)' },
 			{ language: 'TypeScript', color: 'var(--typescript)' },
-			{ language: 'CSS', color: 'var(--css)' }
+			{ language: 'Svelte', color: 'var(--svelte)' },
+			{ language: 'Tailwind CSS', color: 'var(--tailwindcss)' }
 		]
 	}
 
