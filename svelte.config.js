@@ -1,10 +1,10 @@
-import preprocess from 'svelte-preprocess';
-import nested from 'postcss-nested';
-import postcssEnvFunction from 'postcss-env-function';
-import minmax from 'postcss-media-minmax';
-import postcssCustomMedia from 'postcss-custom-media';
-import atImport from 'postcss-import';
-import adapter from '@sveltejs/adapter-auto';
+import preprocess from 'svelte-preprocess'
+import nested from 'postcss-nested'
+import postcssEnvFunction from 'postcss-env-function'
+import minmax from 'postcss-media-minmax'
+import postcssCustomMedia from 'postcss-custom-media'
+import atImport from 'postcss-import'
+import adapter from '@sveltejs/adapter-vercel'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -50,6 +50,6 @@ const config = {
 			$constants: './src/constants'
 		}
 	}
-};
+}
 
-export default config;
+export default config
