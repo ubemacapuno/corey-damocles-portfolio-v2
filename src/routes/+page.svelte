@@ -24,7 +24,7 @@
 					if (target.id === 'about') {
 						aboutInView = isIntersecting
 						experienceInView = !isIntersecting
-					} else if (target.id === 'experience') {
+					} else if (target.id === 'experience' && window.scrollY > aboutElement.clientHeight) {
 						experienceInView = isIntersecting
 						aboutInView = !isIntersecting
 					}
