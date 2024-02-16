@@ -4,7 +4,6 @@
 	import SocialLinks from '$lib/components/SocialLinks.svelte'
 
 	let title = 'Corey Damocles | Projects'
-
 	let aboutInView = false
 	let experienceInView = false
 
@@ -128,7 +127,7 @@
 
 <style lang="postcss">
 	.homepage_container {
-		padding: var(--gap) var(--gap_smallest);
+		padding: var(--gap) var(--gap_smallest) 0;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 	}
@@ -139,7 +138,7 @@
 		justify-content: space-between;
 		position: -webkit-sticky; /* Safari */
 		position: sticky;
-		top: calc(var(--nav_height) + var(--gap));
+		top: calc(var(--nav_height) + var(--gap) + var(--gap_small));
 		z-index: var(--header_level);
 		padding: var(--gap_small);
 		max-height: 650px;

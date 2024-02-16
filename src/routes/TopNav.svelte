@@ -22,18 +22,16 @@
 		<Avatar src="/images/avatar.jpeg" size="xlarge" alt="Corey Damocles" />
 		<div class="link_container">
 			{#each items as item}
-				<ToolTip content={item.toolTip}>
-					<MenuItem
-						href={item.href}
-						iconName={item.iconName}
-						active={(item.href === '/' && $page.url.pathname === '/') ||
-							(item.href !== '/' && $page.url.pathname.startsWith(item.href))}
-					>
-						<h3>
-							{item.description}
-						</h3>
-					</MenuItem>
-				</ToolTip>
+				<MenuItem
+					href={item.href}
+					iconName={item.iconName}
+					active={(item.href === '/' && $page.url.pathname === '/') ||
+						(item.href !== '/' && $page.url.pathname.startsWith(item.href))}
+				>
+					<h3>
+						{item.description}
+					</h3>
+				</MenuItem>
 			{/each}
 			<ToolTip content=" GitHub">
 				<a
@@ -59,7 +57,7 @@
 	</div>
 </nav>
 
-<style>
+<style lang="postcss">
 	nav {
 		display: flex;
 		justify-content: center;
@@ -67,7 +65,11 @@
 		width: 100%;
 		border-bottom: 0.5px solid var(--secondary_line_color);
 		background-color: var(--sheet_color);
+		position: sticky;
+		top: 0;
+		z-index: calc(var(--header_level) + 1);
 	}
+
 	h1 {
 		color: var(--primary_color);
 		font-size: var(--font_huge);
@@ -77,6 +79,7 @@
 		font-size: var(--font_large);
 		margin: 0;
 	}
+
 	.nav_wrapper {
 		height: var(--nav_height);
 		display: flex;
@@ -87,11 +90,13 @@
 		grid-area: topnav;
 		width: var(--max_page_width);
 	}
+
 	.github_link {
 		display: inline-block;
 		width: 24px;
 		height: 24px;
 	}
+
 	.github_icon {
 		width: 100%;
 		height: 100%;
