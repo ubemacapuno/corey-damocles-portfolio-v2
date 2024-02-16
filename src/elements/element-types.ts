@@ -17,5 +17,5 @@ export type Text = 'text' | 'subtext' | 'title'
 export type Theme = 'primary' | 'secondary' | 'tertiary'
 export type Accent = Status | Text | Theme
 
-// Icons (from Material UI)
-export type IconName = 'home' | 'code' | 'star' | 'fork' | 'close'
+// Icons (from Google Icons)
+export type IconName = 'home' | 'code' | 'star' | 'fork' | 'close' | 'expand_more'

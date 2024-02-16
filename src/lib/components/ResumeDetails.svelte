@@ -50,6 +50,7 @@
 	}
 
 	.left {
+		color: var(--secondary_color);
 		flex: 0 0 25%;
 	}
 
