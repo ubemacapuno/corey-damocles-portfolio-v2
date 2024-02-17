@@ -30,13 +30,15 @@
 	<div class="modal_content_wrapper">
 		<p>{@html description}</p>
 	</div>
-	<div class="image-container">
-		<img
-			src={image}
-			alt={title}
-			style={hasImageBorder ? 'border: 1px solid var(--card_line_color);' : ''}
-		/>
-	</div>
+	{#if image}
+		<div class="image-container">
+			<img
+				src={image}
+				alt={title}
+				style={hasImageBorder ? 'border: 1px solid var(--card_line_color);' : ''}
+			/>
+		</div>
+	{/if}
 </Grid>
 
 <style lang="postcss">

@@ -2,8 +2,9 @@ export const projectDetails = {
 	'chrono-core': {
 		repoLink: 'https://github.com/ubemacapuno/chrono-core',
 		demoLink: '',
-		description:
-			'ChronoCore is a Python + React + TypeScript tool for real-time monitoring of GPU, CPU, and RAM, using WebSockets for live updates, displayed on a Raspberry Pi.',
+		description: `<p>As a PC building enthusiast and gamer, I developed ChronoCore to keep tabs on my computer's performance mid-game. It uses Python to track GPU, CPU, and RAM usage on my Windows gaming desktop, and sends this data through a TypeScript WebSocket server to a React interface displayed on my Raspberry Pi touchscreen.</p> 
+			
+		<p>This setup lets me see my desktop's resources in real-time, ensuring optimal gaming performance. It's a fun blend of my hobbies, making gaming even more enjoyable.</p>`,
 		image: '',
 		title: 'Chrono Core'
 	},

@@ -95,7 +95,7 @@
 	.language_container {
 		display: flex;
 		align-items: center;
-		gap: var(--gap);
+		gap: var(--gap_smallest);
 		flex-direction: row;
 		flex-wrap: wrap;
 		margin-bottom: var(--gap_smallest);
