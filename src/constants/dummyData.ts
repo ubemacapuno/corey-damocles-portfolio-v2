@@ -49,12 +49,12 @@ export const dummy_projects = [
 		src: 'https://github.com/ubemacapuno/capa-tracker-sveltekit'
 	},
 	{
-		name: 'tortoise-tea-house-site',
+		name: 'pokemon-pi-dashboard',
 		description: 'SvelteKit Website for Tortoise Tea House in Phoenix, AZ',
 		languages: [[Object], [Object]],
 		stars: 0,
 		forks: 0,
 		updated: '11/23/2022',
-		src: 'https://github.com/ubemacapuno/tortoise-tea-house-site'
+		src: 'https://github.com/ubemacapuno/pokemon-pi-dashboard'
 	}
 ]

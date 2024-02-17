@@ -19,8 +19,9 @@ export const projectDetails = {
 	'rep-log': {
 		repoLink: 'https://github.com/ubemacapuno/rep-log',
 		demoLink: 'https://rep-log.vercel.app/',
-		description:
-			"<p>RepLog is a simple workout tracking application designed to cater to fitness enthusiasts of all levels. Whether you're just starting your fitness journey or are an experienced athlete, RepLog offers a user-friendly and efficient way to log and track your workout progress.</p><p>The app features a range of workout categories including Push, Pull, Lift, Cardio, and Abs, catering to a wide array of fitness routines. One of the features of RepLog is its intuitive rep counter, allowing users to easily track their repetitions with a simple button press. This functionality makes it straightforward to log workouts as you go, and also helps in logging accurate and consistent records of your training sessions. The app's simple design ensures that tracking your fitness progress is hassle-free, making it an ideal tool for anyone looking to enhance their workout experience.</p><p>This application is a standalone project and does not require any external APIs for its core functionalities. All data is stored and managed locally in your browser via localStorage, ensuring user privacy and data security.</p>",
+		description: `<p>RepLog is an intuitive workout tracker, offering a simple UI to log and monitor exercises across various categories like Push, Pull, Lift, Cardio, and Abs.</p>
+			
+		<p>Designed for convenience, RepLog securely stores data locally in your browser and also supports importing and exporting workouts as JSON into local storage, enhancing data management and accessibility. Perfect for enhancing your fitness regime hassle-free!</p>`,
 		image: '/images/rep-log.png',
 		title: 'RepLog'
 	},
@@ -45,12 +46,13 @@ export const projectDetails = {
 		image: '',
 		title: 'CAPA Tracker'
 	},
-	'tortoise-tea-house-site': {
-		repoLink: 'https://github.com/ubemacapuno/tortoise-tea-house-site?tab=readme-ov-file',
-		demoLink: 'https://demo-tortoiseteahouse.netlify.app/',
-		description:
-			'This website is for the Tortoise Tea House shop in Phoenix, AZ. It is a static site built with SvelteKit and hosted on Netlify.',
-		image: '/images/tortoise-tea-house-site.jpg',
-		title: 'Chrono Core'
+	'pokemon-pi-dashboard': {
+		repoLink: 'https://github.com/ubemacapuno/pokemon-pi-dashboard?tab=readme-ov-file',
+		demoLink: 'https://pi-dash.vercel.app/',
+		description: `<p>The Pokémon Pi Dashboard is a fun and interactive way to check the weather. It is a weather app incorporating Pokémon sprites to represent the current weather conditions. </p>
+		
+		<p>The app is built with React + Vite, hosted on Vercel, and uses the OpenWeatherMap API to fetch weather data. The app is designed to be displayed on my personal Raspberry Pi with a 7" touchscreen, but it is responsive and can also be viewed on any device with a browser.</p>`,
+		image: '/images/pokemon-pi-dashboard.jpg',
+		title: 'Pokémon Pi Dashboard'
 	}
 }

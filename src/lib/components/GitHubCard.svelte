@@ -16,7 +16,7 @@
 <div class="card">
 	<button class="repo_name" on:click={onClick}>
 		{name}
-		<Icon name="open_in_new" style="color: var(--subtext_color);" />
+		<Icon name="expand_content" style="color: var(--subtext_color);" />
 	</button>
 	<div class="repo_description">{description}</div>
 	<div class="language_container">
@@ -80,6 +80,8 @@
 		font-size: var(--font_large);
 		margin: 0 0 var(--gap) 0;
 		text-align: left;
+		display: inline-flex;
+		width: fit-content;
 
 		&:hover {
 			color: var(--primary_hover_color);

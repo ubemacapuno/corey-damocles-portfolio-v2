@@ -8,7 +8,7 @@ export const load: PageServerLoad = async () => {
 		'rep-log',
 		'foodie-blog-sveltekit',
 		'capa-tracker-sveltekit',
-		'tortoise-tea-house-site'
+		'pokemon-pi-dashboard'
 	]
 
 	// mapping of repo names to their languages
@@ -34,7 +34,7 @@ export const load: PageServerLoad = async () => {
 			{ language: 'React', color: 'var(--react)' },
 			{ language: 'Tailwind CSS', color: 'var(--tailwindcss)' }
 		],
-		'tortoise-tea-house-site': [
+		'pokemon-pi-dashboard': [
 			{ language: 'Svelte', color: 'var(--svelte)' },
 			{ language: 'CSS', color: 'var(--css)' }
 		],
