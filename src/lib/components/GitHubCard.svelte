@@ -97,13 +97,16 @@
 		align-items: center;
 		gap: var(--gap);
 		flex-direction: row;
+		flex-wrap: wrap;
 		margin-bottom: var(--gap_smallest);
 	}
 
 	.repo_language {
+		display: inline-flex;
+		align-items: center;
+		margin-right: var(--gap);
 		margin-bottom: var(--gap_small);
 		font-size: var(--font_small);
-		text-wrap: nowrap;
 
 		span {
 			color: var(--text_color);

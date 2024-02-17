@@ -26,24 +26,24 @@ export const projectDetails = {
 		title: 'RepLog'
 	},
 	'foodie-blog-sveltekit': {
-		repoLink: '',
-		demoLink: '',
-		description: '',
-		image: '',
-		title: 'Chrono Core'
+		repoLink: 'https://github.com/ubemacapuno/foodie-blog-sveltekit',
+		demoLink: 'https://foodie-blog-sveltekit.vercel.app/',
+		description: `
+		<p>FoodieBlog is a streamlined SvelteKit app for food enthusiasts, offering a simple way to save and rate recipes free from ad clutter. Move beyond tedious searches on traditional recipe sites; this app provides a clear space to log both homemade and restaurant dishes.</p> 
+		
+		<p>It features MongoDB for storage, SvelteKit form actions for easy recipe management, Authjs for secure login, and an OpenAI-powered AI chatbot for an interactive experience. Ideal for those seeking a hassle-free cooking and dining record-keeping platform.</p>`,
+		image: '/images/foodie-blog.jpg',
+		title: 'FoodieBlog'
 	},
 	'capa-tracker-sveltekit': {
 		repoLink: 'https://github.com/ubemacapuno/capa-tracker-sveltekit',
 		demoLink: 'https://capa-tracker.netlify.app/',
-		description: `<p>CAPA Tracker is a full-stack application that allows users to create CAPA records, add information, update information, and delete entries. CAPA stands for Corrective And Preventive Action, and is a process by which a manufacturing organization can make improvements to reduce non-conformances and process gaps.</p>
-
-    <p>My background is in pharmaceutical and medical device quality assurance; in both industries, CAPA processes are required by regulatory agencies. CAPA Tracker is an app that can help document and keep track of your organization's CAPAs.</p>
-    
-    <p>CAPA Tracker is in development using SvelteKit and DaisyUI (Tailwind plugin) on the front-end. Server calls to the MongoDB back-end database are made using SvelteKit form actions. Authentication is handled by Auth.js for SvelteKit (beta version).</p>
-    
-    <p>The page has a chatbot that utilizes an OpenAI API.</p>
+		description: `<p>
+		Before transitioning to software, I worked in pharmaceutical and medical device industries, focusing on CAPA (Corrective And Preventive Action) for compliance. Leveraging this background, I created CAPA Tracker, a SvelteKit app for efficient CAPA record management—enabling easy creation, updates, and deletions to reduce process gaps. </p>
+		
+		<p>Built with SvelteKit, DaisyUI, and MongoDB, and featuring secure Auth.js authentication plus an OpenAI-powered chatbot, CAPA Tracker enhances regulatory adherence and streamlines workflows in key industries.</p>
     `,
-		image: '',
+		image: '/images/capa-tracker.jpg',
 		title: 'CAPA Tracker'
 	},
 	'pokemon-pi-dashboard': {

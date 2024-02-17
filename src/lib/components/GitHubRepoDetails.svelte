@@ -85,6 +85,10 @@
 	.image-container {
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		align-items: self-start;
+	}
+
+	.modal_content_wrapper p {
+		line-height: 1.7;
 	}
 </style>

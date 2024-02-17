@@ -27,7 +27,8 @@ export const load: PageServerLoad = async () => {
 		'foodie-blog-sveltekit': [
 			{ language: 'TypeScript', color: 'var(--typescript)' },
 			{ language: 'Svelte', color: 'var(--svelte)' },
-			{ language: 'Tailwind CSS', color: 'var(--tailwindcss)' }
+			{ language: 'Tailwind CSS', color: 'var(--tailwindcss)' },
+			{ language: 'MongoDB', color: 'var(--mongodb)' }
 		],
 		'rep-log': [
 			{ language: 'TypeScript', color: 'var(--typescript)' },
@@ -41,7 +42,8 @@ export const load: PageServerLoad = async () => {
 		'capa-tracker-sveltekit': [
 			{ language: 'TypeScript', color: 'var(--typescript)' },
 			{ language: 'Svelte', color: 'var(--svelte)' },
-			{ language: 'Tailwind CSS', color: 'var(--tailwindcss)' }
+			{ language: 'Tailwind CSS', color: 'var(--tailwindcss)' },
+			{ language: 'MongoDB', color: 'var(--mongodb)' }
 		]
 	}
 
