@@ -11,9 +11,10 @@ export const projectDetails = {
 		repoLink: 'https://github.com/ubemacapuno/svelte-step-bro',
 		demoLink: 'https://stepbro.vercel.app/',
 		description:
-			'<p>Svelte STEP Bro is a SvelteKit application designed to render STEP (Standard for the Exchange of Product model data) files directly in the browser. Built using SvelteKit and integrating Three.js along with occt-import-js, it offers a seamless solution for engineers, machinists, and professionals who frequently work with CAD files. Recognizing the high costs associated with CAD software licenses, Svelte STEP Bro is developed as a free alternative, facilitating easy viewing and sharing of 3D models.</p> <p>This project also serves as a deep dive into web-based 3D programming, leveraging modern web technologies to bring complex 3D CAD data to the web platform, using the fun and modern SvelteKit meta-framework.</p>',
-		image: '/images/svelte-step-bro.jpeg',
-		title: 'Svelte STEP Bro'
+			'<p>Svelte STEP Bro offers a free CAD viewing solution, enabling direct browser rendering of STEP files without costly licenses. Leveraging WASM via <a href="https://github.com/kovacsv/occt-import-js" target="_blank" rel="noreferrer noopener">occt-import-js</a> for STEP to JSON conversion, it ensures Three.js compatibility, making it a unique tool for engineers and machinists. This SvelteKit application simplifies viewing and sharing 3D models, merging modern web tech with SvelteKit to make complex 3D CAD data easily accessible online.</p>',
+		image: '/images/svelte-step.jpg',
+		title: 'Svelte STEP Bro',
+		hasImageBorder: true
 	},
 	'rep-log': {
 		repoLink: 'https://github.com/ubemacapuno/rep-log',

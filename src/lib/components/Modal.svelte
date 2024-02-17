@@ -72,6 +72,7 @@
 		z-index: var(--modal_level);
 		height: auto;
 		max-height: 90vh;
+		max-width: 900px; /* Default max-width */
 		border-radius: var(--border_radius);
 		background-color: var(--card_color);
 		display: flex;
@@ -120,8 +121,7 @@
 			right: var(--gap);
 		}
 	}
-
-	@media (max-width: 495px) {
+	@media (max-width: 900px) {
 		.modal_wrapper.fullWidth,
 		.modal_wrapper {
 			margin-left: var(--gap);

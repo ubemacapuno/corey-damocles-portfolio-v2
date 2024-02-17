@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Icon from '$elements/Icon.svelte'
 	import GitHubLanguageColor from './GitHubLanguageColor.svelte'
 	import ToolTip from './ToolTip.svelte'
 
@@ -15,6 +16,7 @@
 <div class="card">
 	<button class="repo_name" on:click={onClick}>
 		{name}
+		<Icon name="open_in_new" style="color: var(--subtext_color);" />
 	</button>
 	<div class="repo_description">{description}</div>
 	<div class="language_container">
@@ -32,7 +34,7 @@
 			<ToolTip content="Star on GitHub" placement="bottom">
 				<a href={src} target="_blank" rel="noreferrer noopener">
 					<span class="icon_wrapper">
-						<Icon name="star" style="color: var(--subtext_color);" hasHoverStyle />
+						<Icon name="star" style="color: var(--subtext_color);" />
 						{stars === 0 ? '' : stars}
 					</span>
 				</a>
@@ -40,7 +42,7 @@
 			<ToolTip content="Fork on GitHub" placement="bottom">
 				<a href={src} target="_blank" rel="noreferrer noopener">
 					<span class="icon_wrapper">
-						<Icon name="fork" hasHoverStyle />
+						<Icon name="fork" />
 						{forks === 0 ? '' : forks}
 					</span>
 				</a>
@@ -62,6 +64,14 @@
 		color: var(--grey_8);
 		font-size: var(--font_normal);
 		height: 100%;
+
+		button {
+			display: flex;
+			align-items: center;
+			justify-self: flex-start;
+			gap: var(--gap_smallest);
+			font-weight: bold;
+		}
 	}
 
 	.repo_name {

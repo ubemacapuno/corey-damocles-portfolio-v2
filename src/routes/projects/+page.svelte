@@ -67,7 +67,7 @@
 	<p>Error loading projects: {error.message}</p>
 {/await}
 
-<Modal isModalOpen={!!activeModalType} maxWidth="90vw" onClose={() => (activeModalType = null)}>
+<Modal isModalOpen={!!activeModalType} maxWidth="800px" onClose={() => (activeModalType = null)}>
 	{#if activeProjectDetails}
 		<GitHubRepoDetails {...activeProjectDetails} />
 	{/if}

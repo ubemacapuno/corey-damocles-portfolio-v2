@@ -18,4 +18,12 @@ export type Theme = 'primary' | 'secondary' | 'tertiary'
 export type Accent = Status | Text | Theme
 
 // Icons (from Google Icons)
-export type IconName = 'home' | 'code' | 'star' | 'fork' | 'close' | 'expand_more'
+export type IconName =
+	| 'home'
+	| 'code'
+	| 'star'
+	| 'fork'
+	| 'close'
+	| 'expand_more'
+	| 'expand_content'
+	| 'open_in_new'

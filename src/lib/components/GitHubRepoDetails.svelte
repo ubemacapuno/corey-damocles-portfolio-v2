@@ -4,6 +4,7 @@
 	export let description: string
 	export let image: string
 	export let title: string
+	export let hasImageBorder: boolean = false
 </script>
 
 <div class="modal_headers">
@@ -14,7 +15,13 @@
 	<div class="modal_content_wrapper">
 		<p>{@html description}</p>
 	</div>
-	<img src={image} alt={title} />
+	<div class="image-container">
+		<img
+			src={image}
+			alt={title}
+			style={hasImageBorder ? 'border: 1px solid var(--card_line_color);' : ''}
+		/>
+	</div>
 </Grid>
 
 <style lang="postcss">
@@ -51,7 +58,13 @@
 	}
 
 	img {
-		max-width: 480px;
+		max-width: 100%;
 		max-height: 400px;
+	}
+
+	.image-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 </style>

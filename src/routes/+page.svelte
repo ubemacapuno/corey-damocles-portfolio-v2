@@ -210,12 +210,13 @@
 
 	h2 {
 		color: var(--secondary_color);
-		font-size: var(--font_xxlarge);
+		font-size: var(--font_xlarge);
 		margin: 0;
 	}
 
 	h3 {
 		color: var(--accent_color);
+		font-size: var(--font_large);
 	}
 
 	h5 {
