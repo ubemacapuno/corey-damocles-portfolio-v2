@@ -5,7 +5,7 @@ export const projectDetails = {
 		description: `<p>As a PC building enthusiast and gamer, I developed ChronoCore to keep tabs on my computer's performance mid-game. It uses Python to track GPU, CPU, and RAM usage on my Windows gaming desktop, and sends this data through a TypeScript WebSocket server to a React interface displayed on my Raspberry Pi touchscreen.</p> 
 			
 		<p>This setup lets me see my desktop's resources in real-time, ensuring optimal gaming performance. It's a fun blend of my hobbies, making gaming even more enjoyable.</p>`,
-		image: '',
+		image: '/images/chrono-core.JPG',
 		title: 'Chrono Core'
 	},
 	'svelte-step-bro': {
