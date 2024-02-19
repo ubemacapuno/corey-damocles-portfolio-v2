@@ -50,7 +50,7 @@ export const resumeDetails = [
 		company_name: 'Cardinal Health',
 		start: 'NOV 2015',
 		end: 'JAN 2020',
-		role: 'Senior Nuclear Manufacturing Technician',
+		role: 'Nuclear Manufacturing Technician',
 		summary:
 			'I progressed through roles from Technician I to Senior Technician, ensuring radiopharmaceutical quality per FDA regulations and NRC standards. I led cost-saving projects, validated drug synthesis systems, and supervised weekend shifts. Recognized for expertise in radioactive material handling, I trained new hires, followed cGMP, and addressed non-conformities. I performed aseptic techniques and environmental monitoring, operated GE PETtrace cyclotrons, conducted analytical QC testing, and maintained laboratory equipment.',
 		tags: [

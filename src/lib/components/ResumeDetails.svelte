@@ -20,7 +20,10 @@
 				</h5>
 			</div>
 			<div class="right">
-				<h3>{role} - {company_name}</h3>
+				<h3>
+					<span class="role">{role}</span> <span class="bullet">-</span>
+					<span class="company-name">{company_name}</span>
+				</h3>
 				<p>{summary}</p>
 				<div class="tags">
 					{#each tags as tag}
@@ -34,6 +37,14 @@
 
 <style lang="postcss">
 	h3 {
+		color: var(--accent_color);
+	}
+
+	.bullet {
+		color: var(--subtext_color);
+	}
+
+	.company-name {
 		color: var(--primary_color);
 	}
 
