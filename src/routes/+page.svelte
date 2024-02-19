@@ -3,37 +3,36 @@
 	import ScrollButton from '$lib/components/ScrollButton.svelte'
 	import SocialLinks from '$lib/components/SocialLinks.svelte'
 
-	let title = 'Corey Damocles | Projects'
-	let aboutInView = false
-	let experienceInView = false
+	let pageTitle = 'Corey Damocles | Projects'
+	let isAboutSectionVisible = false
+	let isExperienceSectionVisible = false
 
 	onMount(() => {
-		const aboutElement = document.getElementById('about')
-		const experienceElement = document.getElementById('experience')
+		const aboutSection = document.getElementById('about')
+		const experienceSection = document.getElementById('experience')
 
-		if (aboutElement && experienceElement) {
-			const options = {
-				root: null,
-				rootMargin: '0px',
-				threshold: 0.1
-			}
-
+		if (aboutSection && experienceSection) {
+			// Initialize an intersection observer to monitor visibility changes
+			// @see https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry
 			const observer = new IntersectionObserver((entries) => {
 				entries.forEach((entry) => {
 					const { target, isIntersecting } = entry
+
+					// Simplify visibility toggles based on target's ID ('about' or 'experience')
 					if (target.id === 'about') {
-						aboutInView = isIntersecting
-						experienceInView = !isIntersecting
-					} else if (target.id === 'experience' && window.scrollY > aboutElement.clientHeight) {
-						experienceInView = isIntersecting
-						aboutInView = !isIntersecting
+						isAboutSectionVisible = isIntersecting
+						isExperienceSectionVisible = !isAboutSectionVisible
+					} else if (target.id === 'experience' && window.scrollY > aboutSection.clientHeight) {
+						isExperienceSectionVisible = isIntersecting
+						isAboutSectionVisible = !isExperienceSectionVisible
 					}
 				})
-			}, options)
+			})
 
-			observer.observe(aboutElement)
-			observer.observe(experienceElement)
+			observer.observe(aboutSection)
+			observer.observe(experienceSection)
 
+			// Cleanup function by disconnecting the observer when the component unmounts
 			return () => {
 				observer.disconnect()
 			}
@@ -42,7 +41,7 @@
 </script>
 
 <svelte:head>
-	<title>{title}</title>
+	<title>{pageTitle}</title>
 </svelte:head>
 
 <div class="homepage_container">
@@ -57,8 +56,8 @@
 		</div>
 
 		<div class="scroll_button_wrapper">
-			<ScrollButton targetId={'about'} isActive={aboutInView} />
-			<ScrollButton targetId="experience" isActive={experienceInView} />
+			<ScrollButton targetId={'about'} isActive={isAboutSectionVisible} />
+			<ScrollButton targetId="experience" isActive={isExperienceSectionVisible} />
 		</div>
 
 		<div>
