@@ -13,17 +13,12 @@
 			: 'var(--subtext_color)'};
 	"
 	></span>
-	<button
-		use:scrollTo={targetId}
-		style="color: {isActive ? 'var(--primary_color)' : 'var(--subtext_color)'}; font-size: {isActive
-			? 'var(--font_large)'
-			: 'var(--font_normal)'};"
-	>
+	<button use:scrollTo={targetId} class={isActive ? 'active' : ''}>
 		{targetId.charAt(0).toUpperCase() + targetId.slice(1)}
 	</button>
 </div>
 
-<style>
+<style lang="postcss">
 	.container {
 		display: flex;
 		flex-direction: row;
@@ -41,6 +36,17 @@
 		transition:
 			font-size 0.3s ease,
 			color 0.3s ease;
+		color: var(--subtext_color);
+		font-size: var(--font_normal);
+	}
+
+	button.active {
+		color: var(--primary_color);
+		font-size: var(--font_large);
+	}
+
+	button:hover {
+		color: var(--secondary_hover_color);
 	}
 
 	.line {

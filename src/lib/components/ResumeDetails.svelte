@@ -21,9 +21,9 @@
 			</div>
 			<div class="right">
 				<h3>
-					<span class="role">{role}</span> <span class="bullet">-</span>
-					<span class="company-name">{company_name}</span>
+					<span class="role">{role}</span>
 				</h3>
+				<span class="company_name">{company_name}</span>
 				<p>{summary}</p>
 				<div class="tags">
 					{#each tags as tag}
@@ -38,13 +38,16 @@
 <style lang="postcss">
 	h3 {
 		color: var(--accent_color);
+		margin-bottom: 0;
 	}
 
 	.bullet {
 		color: var(--subtext_color);
 	}
 
-	.company-name {
+	.company_name {
+		display: flex;
+		margin-bottom: var(--gap_small);
 		color: var(--primary_color);
 	}
 

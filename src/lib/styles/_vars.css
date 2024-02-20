@@ -115,6 +115,7 @@ body {
 	--primary_color: var(--purple);
 	--link_color: var(--teal);
 	--primary_hover_color: var(--teal_light);
+	--secondary_hover_color: var(--purple_light);
 	--primary_active_color: var(--purple_a);
 	--secondary_color: var(--teal);
 	--tertiary_color: var(--teal_a);

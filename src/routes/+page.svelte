@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ProjectsLink from '$lib/components/ProjectsLink.svelte'
 	import ResumeDetails from '$lib/components/ResumeDetails.svelte'
 	import ScrollButton from '$lib/components/ScrollButton.svelte'
 	import SocialLinks from '$lib/components/SocialLinks.svelte'
@@ -58,20 +59,23 @@
 		<div class="scroll_button_wrapper">
 			<ScrollButton targetId={'about'} isActive={isAboutSectionVisible} />
 			<ScrollButton targetId="experience" isActive={isExperienceSectionVisible} />
+			<div class="projects_link_header_wrapper">
+				<ProjectsLink />
+			</div>
 		</div>
 
-		<div>
-			<SocialLinks />
+		<SocialLinks />
+		<div class="projects_link_mobile">
+			<ProjectsLink />
 		</div>
 	</div>
 	<div class="main_content">
 		<div id="about">
 			<h5 class="mobile_header uppercase">About</h5>
 			<p>
-				During the COVID-19 pandemic in January 2022, I became interested in leveling up my skills
-				by learning coding and web development. I partnered with fellow developers in the 100Devs
-				community, engaging in hands-on learning through developing websites and applications for
-				agency projects.
+				I am a full-stack developer in Phoenix, AZ. I started my coding journey during the COVID-19
+				pandemic in January 2022, learning the basics of software development, while also working in
+				the medical device sector as a Quality Specialist.
 			</p>
 			<p>
 				My career took a leap in April 2022 when I joined the <a
@@ -84,7 +88,7 @@
 				web development agency as a consulting developer, and further progressed as I transitioned to
 				a full-time software engineer role at
 				<a href="https://fastdms.com/" target="_blank" rel="noreferrer noopener">Fast DMS</a> in December
-				2022, focusing on crafting accessible user experiences in the contract manufacturing and procurement
+				2022, focusing on crafting custom ERP software solutions in the contract manufacturing and procurement
 				industry.
 			</p>
 			<p>
@@ -101,7 +105,9 @@
 			</p>
 			<p>
 				I have a Bachelor's Degree in Biomedical Laboratory Science from Michigan State University,
-				and enjoy rooting for the Spartans during college football and basketball seasons.
+				and enjoy rooting for the Spartans during the football and basketball seasons. <span
+					style="color: var(--green)">Go Green!</span
+				>
 			</p>
 			<p>Let's build something together!</p>
 
@@ -150,6 +156,11 @@
 			gap: var(--gap);
 			margin-top: var(--gap);
 		}
+
+		.projects_link_header_wrapper {
+			display: block;
+			margin-left: var(--gap_small);
+		}
 	}
 
 	.main_content {
@@ -167,6 +178,10 @@
 		p {
 			margin-bottom: var(--gap);
 		}
+	}
+
+	.projects_link_mobile {
+		display: none;
 	}
 
 	.main_content,
@@ -190,6 +205,10 @@
 				.scroll_button_wrapper {
 					display: none;
 				}
+
+				.projects_link_header_wrapper {
+					display: none;
+				}
 			}
 		}
 
@@ -198,6 +217,9 @@
 			.mobile_header {
 				display: block;
 			}
+		}
+		.projects_link_mobile {
+			display: block;
 		}
 	}
 
@@ -208,7 +230,6 @@
 	}
 
 	h2 {
-		color: var(--secondary_color);
 		font-size: var(--font_xlarge);
 		margin: 0;
 	}
