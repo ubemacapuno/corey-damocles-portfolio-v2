@@ -37,12 +37,12 @@
 	}
 
 	a {
-		color: var(--accent_color);
+		color: var(--primary_color);
 		font-size: var(--font_large);
 		text-decoration: none;
 		transition:
 			transform 0.3s ease,
-			color 0.3s ease; /* Add transform to the transition */
+			color 0.3s ease;
 		display: flex;
 		align-items: center;
 		gap: var(--gap);
@@ -50,11 +50,10 @@
 	}
 
 	a:hover {
-		/* color: var(--accent_color); */
 		transform: scale(1.2);
 
 		span {
-			color: var(--primary_color);
+			color: var(--accent_color);
 		}
 	}
 
