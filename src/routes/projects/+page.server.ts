@@ -36,7 +36,8 @@ export const load: PageServerLoad = async () => {
 			{ language: 'Tailwind CSS', color: 'var(--tailwindcss)' }
 		],
 		'pokemon-pi-dashboard': [
-			{ language: 'Svelte', color: 'var(--svelte)' },
+			{ language: 'TypeScript', color: 'var(--typescript)' },
+			{ language: 'React', color: 'var(--react)' },
 			{ language: 'CSS', color: 'var(--css)' }
 		],
 		'capa-tracker-sveltekit': [
