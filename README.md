@@ -1,55 +1,39 @@
-# Project Setup TODO Checklist
+## Corey Damocles Portfolio: [Visit My Portfolio Here](https://coreydamocles.vercel.app/)
 
-## Must-Have Features:
+This is my second version of my portfolio with my recent projects and contact information, developed using SvelteKit.
 
-- [ ] **Email Form for Contact**
+## How It's Made:
 
-  - Install and configure EmailJS
-    - Sign up for EmailJS
-    - Obtain API keys and integrate them into the project
-    - Create an email template for receiving messages
-    - Implement the email form in Svelte and test sending functionality
+**Tech used:**
 
-- [ ] **List Component**
+Svelte/SvelteKit, GitHub API
 
-  - Develop a dynamic list component for displaying projects, skills, or other relevant information
-    - Ensure responsiveness and accessibility standards are met
+## Install Locally
 
-- [ ] **Contact Info Links**
-  - Add clickable links for professional profiles and repositories
-    - [ ] LinkedIn
-    - [ ] GitHub
-    - [ ] CodePen
+Using pnpm:
 
-## Like-to-Have Features:
+Install dependencies
 
-- [ ] **In-App Three.js Demo**
-  - Integrate a basic Three.js scene as a demonstration of 3D capabilities within the app
-    - [ ] Research and select a simple, interactive Three.js example suitable for the portfolio theme
-    - [ ] Implement the Three.js setup within a Svelte component
-    - [ ] Ensure the demo is responsive and does not significantly impact the site's performance
+```
+$ pnpm i
+```
 
-## Deployment:
+Start development server
 
-- [ ] Ensure all features are fully functional and tested locally
-- [ ] Deploy the latest version to Vercel
-  - [ ] Set up environment variables in Vercel for any API keys or sensitive information
-  - [ ] Confirm that the site is live and all features work as expected
+```
+$ pnpm run dev
+```
 
-## Optimization and Best Practices:
+## Things to Add:
 
-- [ ] Perform a final code review to clean up and refactor where necessary
-- [ ] Test website on different browsers and devices to ensure compatibility and responsiveness
-- [ ] Validate HTML and CSS to ensure compliance with web standards
-- [ ] Optimize images and assets for faster loading times
+Create a `.env` file at the root directory and enter your GitHub API key:
 
-## Documentation:
+```
+VITE_GITHUB_TOKEN=[ENTER GITHUB KEY HERE]
+```
 
-- [ ] Update the README file to reflect the final state of the project, including setup instructions, feature list, and acknowledgments
-- [ ] Comment code where necessary to explain complex logic or decisions made
+## Lessons Learned:
 
-## Final Checks:
-
-- [ ] Gather feedback from peers or mentors and make final adjustments
-- [ ] Monitor site analytics post-launch to understand user behavior and areas for improvement
-- [ ] Plan future updates or features based on feedback and performance
+- Better understanding of SvelteKit and using an API to grab data server-side
+- Better understanding of auto-importing components
+- Better understanding of using a class-based CSS design system, and using POSTCSS

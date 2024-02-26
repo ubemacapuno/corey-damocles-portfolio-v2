@@ -98,7 +98,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin: var(--gap) 0;
+		margin: var(--gap) 0 var(--gap_largest);
 	}
 
 	@media (max-width: 650px) {
