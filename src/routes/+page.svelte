@@ -12,28 +12,27 @@
 		const aboutSection = document.getElementById('about')
 		const experienceSection = document.getElementById('experience')
 
+		const options = {
+			threshold: 0.4 // 40% of the element is in view
+		}
+
 		if (aboutSection && experienceSection) {
-			// Initialize an intersection observer to monitor visibility changes
-			// @see https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry
 			const observer = new IntersectionObserver((entries) => {
 				entries.forEach((entry) => {
 					const { target, isIntersecting } = entry
 
-					// Simplify visibility toggles based on target's ID ('about' or 'experience')
+					// Update visibility based on intersection and element ID
 					if (target.id === 'about') {
 						isAboutSectionVisible = isIntersecting
-						isExperienceSectionVisible = !isAboutSectionVisible
-					} else if (target.id === 'experience' && window.scrollY > aboutSection.clientHeight) {
+					} else if (target.id === 'experience') {
 						isExperienceSectionVisible = isIntersecting
-						isAboutSectionVisible = !isExperienceSectionVisible
 					}
 				})
-			})
+			}, options)
 
 			observer.observe(aboutSection)
 			observer.observe(experienceSection)
 
-			// Cleanup function by disconnecting the observer when the component unmounts
 			return () => {
 				observer.disconnect()
 			}

@@ -1,6 +1,6 @@
 ## Corey Damocles Portfolio: [Visit My Portfolio Here](https://coreydamocles.vercel.app/)
 
-This is my second version of my portfolio with my recent projects and contact information, developed using SvelteKit.
+This is the second version of my portfolio, showcasing my most-recent projects and contact information, developed using SvelteKit 2.0.
 
 ## How It's Made:
 
@@ -8,7 +8,7 @@ This is my second version of my portfolio with my recent projects and contact in
 
 Svelte/SvelteKit, GitHub API
 
-## Install Locally
+## Run Locally
 
 Using pnpm:
 
@@ -34,6 +34,7 @@ VITE_GITHUB_TOKEN=[ENTER GITHUB KEY HERE]
 
 ## Lessons Learned:
 
-- Better understanding of SvelteKit and using an API to grab data server-side
-- Better understanding of auto-importing components
-- Better understanding of using a class-based CSS design system, and using POSTCSS
+- Utilizing the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry) for click-scrolling events.
+- Better understanding of using a class-based CSS design system, and using POSTCSS.
+- Better understanding of SvelteKit and grabbing data from an API using +page.server.ts (server-side).
+- Better understanding of auto-importing components.
