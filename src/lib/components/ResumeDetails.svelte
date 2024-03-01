@@ -8,11 +8,29 @@
 	 * - "company_name", "years", "role", "summary", and "tags" on the right.
 	 * Tags are displayed using the Tag component, iterating through each tag in the array.
 	 */
+
+	function openInNewTab(url: string) {
+		const newTab = window.open(url, '_blank')
+		if (newTab) {
+			newTab.focus()
+		} else {
+			console.error('Failed to open the URL in a new tab.')
+		}
+	}
 </script>
 
 <div class="cards_container">
-	{#each resumeDetails as { company_name, start, end, role, summary, tags }}
-		<div class="card">
+	{#each resumeDetails as { company_name, start, end, role, summary, tags, url }}
+		<div
+			class="card"
+			role="link"
+			aria-label="View more about {role} at {company_name}"
+			tabindex="0"
+			on:click={() => openInNewTab(url)}
+			on:keypress={(event) => {
+				if (event.key === 'Enter') openInNewTab(url)
+			}}
+		>
 			<div class="left">
 				<h5>
 					{start} -<br />
@@ -24,7 +42,7 @@
 					<span class="role">{role}</span>
 				</h3>
 				<span class="company_name">{company_name}</span>
-				<p>{summary}</p>
+				<p class="summary">{summary}</p>
 				<div class="tags">
 					{#each tags as tag}
 						<Tag accent="tertiary">{tag}</Tag>
@@ -56,10 +74,26 @@
 
 		.card {
 			display: flex;
-			gap: var(--gap_small);
+			gap: 0;
 			justify-content: space-between;
 			align-items: flex-start;
 			margin-bottom: var(--gap_largest);
+			transition:
+				background-color 0.3s ease,
+				border-radius 0.3s ease;
+			border-radius: var(--border_radius);
+			background-color: rgba(255, 255, 255, 0);
+			padding: var(--gap);
+
+			.summary {
+				font-size: var(--font_small);
+			}
+		}
+
+		.card:hover {
+			background-color: var(--purple_backdrop);
+			border-radius: 8px;
+			cursor: pointer;
 		}
 	}
 

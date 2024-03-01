@@ -13,7 +13,7 @@
 		const experienceSection = document.getElementById('experience')
 
 		const options = {
-			threshold: 0.4 // 40% of the element is in view
+			threshold: 0.1 // 10% of the element is in view
 		}
 
 		if (aboutSection && experienceSection) {

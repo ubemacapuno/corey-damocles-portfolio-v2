@@ -134,4 +134,5 @@ body {
 	--table_line: inset 0 -1px var(--line_color); /* Table line color hack */
 	--line: 1px solid var(--line_color);
 	--backdrop: hsla(0, 0%, 10%, 70%); /* Modal backdrop color 70% opacity */
+	--purple_backdrop: hsla(270, 100%, 90%, 20%); /* Modal backdrop color 70% opacity */
 }

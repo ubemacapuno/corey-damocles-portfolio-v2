@@ -17,7 +17,8 @@ export const resumeDetails = [
 			'Unit & E2E Tests',
 			'HTML & (Post)CSS',
 			'Three.js'
-		]
+		],
+		url: 'https://fastdms.com/'
 	},
 	{
 		company_name: 'Pure Func',
@@ -26,7 +27,8 @@ export const resumeDetails = [
 		role: 'Front-End Developer',
 		summary:
 			'As a consulting front-end developer, I build dynamic web apps, mainly using Svelte or React for the front-end and Supabase/PostgreSQL for the backend. Through Agile and Lean methods, I ensure high-quality deliverables via code reviews and testing. Collaborating with stakeholders and developers, I refine app experiences and meet with local customers to meet their needs.',
-		tags: ['TypeScript', 'JavaScript', 'Svelte', 'React', 'PostegreSQL', 'Supabase']
+		tags: ['TypeScript', 'JavaScript', 'Svelte', 'React', 'PostegreSQL', 'Supabase'],
+		url: 'https://purefunc.io/'
 	},
 	{
 		company_name: 'Dexcom',
@@ -44,7 +46,8 @@ export const resumeDetails = [
 			'HighJump Software',
 			'CAPA & Nonconformance',
 			'FDA 21 CFR 820'
-		]
+		],
+		url: 'https://www.dexcom.com/'
 	},
 	{
 		company_name: 'Cardinal Health',
@@ -59,6 +62,7 @@ export const resumeDetails = [
 			'Pharmaceutical Manufacturing',
 			'Authorized User of Nuclear Material',
 			'FDA 21 CFR 210 & 211'
-		]
+		],
+		url: 'https://www.cardinalhealth.com/'
 	}
 ]
