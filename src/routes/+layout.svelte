@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Footer from '$lib/components/Footer.svelte'
 	import '$lib/styles/index.css'
 	import TopNav from './TopNav.svelte'
 </script>
@@ -9,9 +8,6 @@
 	<div class="page_container">
 		<slot />
 	</div>
-	<footer>
-		<Footer />
-	</footer>
 </div>
 
 <style>

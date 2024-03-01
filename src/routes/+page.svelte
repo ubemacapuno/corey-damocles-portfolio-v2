@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Footer from '$lib/components/Footer.svelte'
 	import ProjectsLink from '$lib/components/ProjectsLink.svelte'
 	import ResumeDetails from '$lib/components/ResumeDetails.svelte'
 	import ScrollButton from '$lib/components/ScrollButton.svelte'
@@ -13,7 +14,7 @@
 		const experienceSection = document.getElementById('experience')
 
 		const options = {
-			threshold: 0.1 // 10% of the element is in view
+			threshold: 0.2 // 10% of the element is in view
 		}
 
 		if (aboutSection && experienceSection) {
@@ -54,6 +55,7 @@
 				Utilizing cutting-edge technologies to craft dynamic and streamlined software solutions.
 			</h3>
 		</div>
+		<SocialLinks />
 
 		<div class="scroll_button_wrapper">
 			<ScrollButton targetId={'about'} isActive={isAboutSectionVisible} />
@@ -62,8 +64,6 @@
 				<ProjectsLink />
 			</div>
 		</div>
-
-		<SocialLinks />
 		<div class="projects_link_mobile">
 			<ProjectsLink />
 		</div>
@@ -126,6 +126,7 @@
 			<h5 class="mobile_header uppercase">Experience</h5>
 			<ResumeDetails />
 		</div>
+		<Footer />
 	</div>
 </div>
 
@@ -139,7 +140,7 @@
 	.header_content {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		gap: var(--gap);
 		position: -webkit-sticky; /* Safari */
 		position: sticky;
 		top: calc(var(--nav_height) + var(--gap) + var(--gap_small));

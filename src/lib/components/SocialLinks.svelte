@@ -123,6 +123,7 @@
 		&:hover {
 			transition: var(--transition_speed) ease-in-out;
 			fill: var(--primary_hover_color);
+			transform: scale(1.2);
 		}
 	}
 </style>
