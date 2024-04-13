@@ -10,7 +10,7 @@
 	--grey_4: #282828;
 	--grey_5: #232323;
 	--grey_6: #3e3e3e;
-	--grey_7: #707070;
+	--grey_7: #8892b0;
 	--grey_8: #aaa;
 	--grey_9: #bbb;
 
@@ -26,8 +26,10 @@
 	--blue: #1e6ec8;
 	--blue_a: #1e6dc85a;
 	--blue_light: #4a90e2;
-	--green: #53a83f;
-	--green_a: #52a83f08;
+	--green: #64ffda;
+	--green_a: #64ffda4a;
+	--green_dark: #01a181;
+	--green_light: #8affd7;
 	--red: #e54b4b;
 	--red_a: #e54b4b0b;
 	--yellow: #fcb61a;
@@ -42,6 +44,10 @@
 	--pink_light: #f2c3ff;
 	--pink_a: #e15fed4a;
 	--teal: #00b8d4;
+	--navy_a: rgba(2, 12, 27, 0.7);
+	--navy_dark: #020e20;
+	--navy: #0a192f;
+	--navy_light: #112240;
 	--teal_a: #00b8d48c;
 	--teal_light: #9af2ff;
 
@@ -97,13 +103,13 @@
 body {
 	/* Color Intentions */
 	--hover_color: var(--grey_a);
-	--sheet_color: var(--grey_1);
-	--bg_color: var(--grey_2);
+	--sheet_color: var(--navy_light);
+	--bg_color: var(--navy);
 	--line_color: var(--grey_7);
 	--card_line_color: var(--grey_6);
-	--secondary_line_color: var(--purple_a);
+	--secondary_line_color: var(--green_a);
 	--modal_color: var(--grey_4);
-	--card_color: var(--grey_5);
+	--card_color: var(--navy_light);
 	--input_border_color: var(--grey_6);
 	--button_border_color: var(--grey_a_2);
 	--subtext_color: var(--grey_7);
@@ -112,11 +118,11 @@ body {
 	--text_color: var(--grey_9);
 	--placeholder_color: var(--grey_7);
 	--disabled_color: var(--grey_6);
-	--primary_color: var(--purple);
+	--primary_color: var(--green);
 	--link_color: var(--teal);
 	--primary_hover_color: var(--teal_light);
-	--secondary_hover_color: var(--purple_light);
-	--primary_active_color: var(--purple_a);
+	--secondary_hover_color: var(--green_light);
+	--primary_active_color: var(--green_a);
 	--secondary_color: var(--teal);
 	--tertiary_color: var(--teal_a);
 	--accent_color: var(--teal_light);
@@ -133,6 +139,6 @@ body {
 	/* Misc */
 	--table_line: inset 0 -1px var(--line_color); /* Table line color hack */
 	--line: 1px solid var(--line_color);
-	--backdrop: hsla(0, 0%, 10%, 70%); /* Modal backdrop color 70% opacity */
-	--purple_backdrop: hsla(270, 100%, 90%, 20%); /* Modal backdrop color 70% opacity */
+	--backdrop: hsla(0, 0%, 10%, 70%);
+	--teal_backdrop: hsla(180, 100%, 90%, 0.308);
 }

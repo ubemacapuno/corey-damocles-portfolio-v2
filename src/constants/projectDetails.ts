@@ -33,7 +33,7 @@ export const projectDetails = {
 		<p>FoodieBlog is a streamlined SvelteKit app for food enthusiasts, offering a simple way to save and rate recipes free from ad clutter. Move beyond tedious searches on traditional recipe sites; this app provides a clear space to log both homemade and restaurant dishes.</p> 
 		
 		<p>It features MongoDB for storage, SvelteKit form actions for easy recipe management, Authjs for secure login, and an OpenAI-powered AI chatbot for an interactive experience. Ideal for those seeking a hassle-free cooking and dining record-keeping platform.</p>`,
-		image: '/images/foodie-blog.jpg',
+		image: '/images/foodie-blog.png',
 		title: 'FoodieBlog'
 	},
 	'capa-tracker-sveltekit': {
@@ -44,7 +44,7 @@ export const projectDetails = {
 		
 		<p>Built with SvelteKit, DaisyUI, and MongoDB, and featuring secure Auth.js authentication plus an OpenAI-powered chatbot, CAPA Tracker enhances regulatory adherence and streamlines workflows in key industries.</p>
     `,
-		image: '/images/capa-tracker.jpg',
+		image: '/images/capa-tracker.png',
 		title: 'CAPA Tracker'
 	},
 	'pokemon-pi-dashboard': {

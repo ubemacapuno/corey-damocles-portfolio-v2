@@ -57,13 +57,14 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		border: 1px solid var(--card_line_color);
 		border-radius: var(--border_radius);
 		padding: var(--gap_small);
 		margin-bottom: var(--gap_small);
 		color: var(--grey_8);
 		font-size: var(--font_normal);
 		height: 100%;
+		background-color: var(--card_color);
+		box-shadow: 0 10px 30px -10px var(--navy_a);
 
 		button {
 			display: flex;
@@ -75,7 +76,7 @@
 	}
 
 	.repo_name {
-		color: var(--secondary_color);
+		color: var(--primary_color);
 		transition: var(--transition_speed) ease-in-out;
 		font-size: var(--font_large);
 		margin: 0 0 var(--gap) 0;

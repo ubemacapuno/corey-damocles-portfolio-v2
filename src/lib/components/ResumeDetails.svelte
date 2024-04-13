@@ -91,7 +91,7 @@
 		}
 
 		.card:hover {
-			background-color: var(--purple_backdrop);
+			background-color: var(--teal_backdrop);
 			border-radius: 8px;
 			cursor: pointer;
 		}

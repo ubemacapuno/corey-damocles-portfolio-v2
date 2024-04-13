@@ -5,7 +5,7 @@ export const resumeDetails = [
 		end: 'Present',
 		role: 'Software Engineer',
 		summary:
-			'I develop full-stack applications to improve project management for custom industrial parts production and distribution. Specializing in TypeScript and SvelteKit for front-end, and Node.js server management for routing, authentication, and API integration. I manage MongoDB databases focusing on design, indexing, and modeling. I engage in Agile practices like Scrum and Kanban, enhancing team workflows and product quality, ensuring a robust, scalable codebase that meets accessibility and responsive design standards.',
+			'I design and develop full-stack ERP and Supply Chain Management applications for the industrial manufacturing and procurement sector, specializing in converting part designs into instant quotes with detailed lead times, while managing the full lifecycle from inventory tracking to quality control to customer delivery.',
 		tags: [
 			'TypeScript',
 			'SvelteKit/Svelte',
