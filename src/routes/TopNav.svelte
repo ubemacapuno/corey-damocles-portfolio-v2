@@ -63,8 +63,8 @@
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		border-bottom: 0.5px solid var(--secondary_line_color);
-		background-color: var(--sheet_color);
+		background-color: rgba(10, 25, 47, 0.85);
+		box-shadow: 0 10px 30px -10px var(--navy_a);
 		position: sticky;
 		top: 0;
 		z-index: calc(var(--header_level) + 1);

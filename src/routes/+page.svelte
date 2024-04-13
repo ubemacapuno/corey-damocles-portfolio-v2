@@ -123,8 +123,7 @@
 				> events.
 			</p>
 			<p>
-				I have a Bachelor's Degree in Biomedical Laboratory Science from Michigan State University,
-				and enjoy rooting for the Spartans during the football and basketball seasons. <span
+				I have a Bachelor's Degree in Biomedical Laboratory Science from Michigan State University. <span
 					style="color: var(--green)">Go Green!</span
 				>
 			</p>

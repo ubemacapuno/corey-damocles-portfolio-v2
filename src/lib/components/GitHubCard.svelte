@@ -64,6 +64,7 @@
 		font-size: var(--font_normal);
 		height: 100%;
 		background-color: var(--card_color);
+		box-shadow: 0 10px 30px -10px var(--navy_a);
 
 		button {
 			display: flex;

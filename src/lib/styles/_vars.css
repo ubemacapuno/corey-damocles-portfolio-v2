@@ -28,6 +28,7 @@
 	--blue_light: #4a90e2;
 	--green: #64ffda;
 	--green_a: #64ffda4a;
+	--green_dark: #01a181;
 	--green_light: #8affd7;
 	--red: #e54b4b;
 	--red_a: #e54b4b0b;
@@ -43,7 +44,8 @@
 	--pink_light: #f2c3ff;
 	--pink_a: #e15fed4a;
 	--teal: #00b8d4;
-	--navy_a: #0a192f4a;
+	--navy_a: rgba(2, 12, 27, 0.7);
+	--navy_dark: #020e20;
 	--navy: #0a192f;
 	--navy_light: #112240;
 	--teal_a: #00b8d48c;
@@ -101,7 +103,7 @@
 body {
 	/* Color Intentions */
 	--hover_color: var(--grey_a);
-	--sheet_color: var(--navy_a);
+	--sheet_color: var(--navy_light);
 	--bg_color: var(--navy);
 	--line_color: var(--grey_7);
 	--card_line_color: var(--grey_6);
