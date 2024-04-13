@@ -60,7 +60,7 @@ export const resumeDetails = [
 			'SAP ERP',
 			'QC Testing',
 			'Pharmaceutical Manufacturing',
-			'Authorized User of Nuclear Material',
+			'Nuclear Material Authorization',
 			'FDA 21 CFR 210 & 211'
 		],
 		url: 'https://www.cardinalhealth.com/'
