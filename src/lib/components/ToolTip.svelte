@@ -21,6 +21,7 @@
 	on:mouseenter={() => (showToolTip = true)}
 	on:mouseleave={() => (showToolTip = false)}
 	{style}
+	role="tooltip"
 >
 	<slot />
 </span>

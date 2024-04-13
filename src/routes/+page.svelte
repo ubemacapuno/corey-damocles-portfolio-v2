@@ -4,40 +4,58 @@
 	import ResumeDetails from '$lib/components/ResumeDetails.svelte'
 	import ScrollButton from '$lib/components/ScrollButton.svelte'
 	import SocialLinks from '$lib/components/SocialLinks.svelte'
+	import { onDestroy } from 'svelte'
 
 	let pageTitle = 'Corey Damocles | Projects'
 	let isAboutSectionVisible = false
 	let isExperienceSectionVisible = false
 
+	function calculateThreshold() {
+		// Dynamically calculate threshold based on screen height
+		return window.innerHeight < 1080 ? 0.2 : 0.4
+	}
+
 	onMount(() => {
 		const aboutSection = document.getElementById('about')
 		const experienceSection = document.getElementById('experience')
 
-		const options = {
-			threshold: 0.2 // 20% of the element is in view
-		}
+		const observerOptions = () => ({
+			threshold: calculateThreshold() // get a dynamic threshold
+		})
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				const { target, isIntersecting } = entry
+				if (target.id === 'about') {
+					isAboutSectionVisible = isIntersecting
+				} else if (target.id === 'experience') {
+					isExperienceSectionVisible = isIntersecting
+				}
+			})
+		}, observerOptions())
 
 		if (aboutSection && experienceSection) {
-			const observer = new IntersectionObserver((entries) => {
-				entries.forEach((entry) => {
-					const { target, isIntersecting } = entry
-
-					// Update visibility based on intersection and element ID
-					if (target.id === 'about') {
-						isAboutSectionVisible = isIntersecting
-					} else if (target.id === 'experience') {
-						isExperienceSectionVisible = isIntersecting
-					}
-				})
-			}, options)
-
 			observer.observe(aboutSection)
 			observer.observe(experienceSection)
+		}
 
-			return () => {
-				observer.disconnect()
+		// Recalculate threshold on window resize
+		const handleResize = () => {
+			observer.disconnect() // Disconnect the old observer with the old threshold
+			if (aboutSection) {
+				observer.observe(aboutSection)
+			}
+			if (experienceSection) {
+				observer.observe(experienceSection)
 			}
 		}
+
+		window.addEventListener('resize', handleResize)
+
+		onDestroy(() => {
+			observer.disconnect()
+			window.removeEventListener('resize', handleResize)
+		})
 	})
 </script>
 
@@ -57,10 +75,12 @@
 		</div>
 		<SocialLinks />
 
-		<div class="scroll_button_wrapper">
-			<ScrollButton targetId={'about'} isActive={isAboutSectionVisible} />
-			<ScrollButton targetId="experience" isActive={isExperienceSectionVisible} />
-			<div class="projects_link_header_wrapper">
+		<div class="nav_wrapper">
+			<div class="scroll_button_wrapper">
+				<ScrollButton targetId="about" isActive={isAboutSectionVisible} />
+				<ScrollButton targetId="experience" isActive={isExperienceSectionVisible} />
+			</div>
+			<div class="projects_link_wrapper">
 				<ProjectsLink />
 			</div>
 		</div>
@@ -110,12 +130,12 @@
 			</p>
 			<p>Let's build something together!</p>
 
-			<h3>Here are a few technologies I’ve been building with recently:</h3>
+			<h3>A few tools I’ve built with recently:</h3>
 			<ul>
-				<li>TypeScript</li>
 				<li>JavaScript (ES6+)</li>
+				<li>TypeScript</li>
 				<li>Svelte</li>
-				<li>SvelteKit</li>
+				<li>Tailwind CSS</li>
 				<li>React</li>
 				<li>Python</li>
 				<li>MongoDB</li>
@@ -148,16 +168,23 @@
 		padding: var(--gap_small);
 		max-height: 650px;
 
-		.scroll_button_wrapper {
+		.nav_wrapper {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: flex-start;
 			gap: var(--gap);
 			margin-top: var(--gap);
+
+			.scroll_button_wrapper {
+				display: flex;
+				flex-direction: column;
+				gap: var(--gap_large);
+				height: 80px;
+			}
 		}
 
-		.projects_link_header_wrapper {
+		.projects_link_wrapper {
 			display: block;
 			margin-left: var(--gap_small);
 		}
@@ -202,11 +229,11 @@
 				position: relative;
 				top: 0;
 
-				.scroll_button_wrapper {
+				.nav_wrapper {
 					display: none;
 				}
 
-				.projects_link_header_wrapper {
+				.projects_link_wrapper {
 					display: none;
 				}
 			}
@@ -265,6 +292,10 @@
 		margin: var(--gap_smallest) var(--gap) var(--gap);
 		overflow: hidden;
 		padding-left: var(--gap);
+
+		li {
+			font-size: var(--font_small);
+		}
 
 		li::before {
 			content: '>';

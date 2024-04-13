@@ -37,7 +37,7 @@
 	}
 
 	a {
-		color: var(--primary_color);
+		color: var(--subtext_color);
 		font-size: var(--font_large);
 		text-decoration: none;
 		transition:
@@ -51,6 +51,7 @@
 
 	a:hover {
 		transform: scale(1.2);
+		color: var(--primary_color);
 
 		span {
 			color: var(--accent_color);

@@ -16,6 +16,7 @@
 		flex-direction: column;
 		min-height: 100vh;
 		width: 100%;
+		background-color: var(--bg_color);
 	}
 
 	.page_container {
