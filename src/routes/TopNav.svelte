@@ -122,7 +122,7 @@
 		}
 
 		h3 {
-			font-size: var(--font-normal);
+			font-size: var(--font_normal);
 		}
 	}
 

@@ -27,3 +27,4 @@ export type IconName =
 	| 'expand_more'
 	| 'expand_content'
 	| 'open_in_new'
+	| 'play_arrow'
