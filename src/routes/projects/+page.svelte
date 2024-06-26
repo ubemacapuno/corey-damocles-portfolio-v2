@@ -4,11 +4,10 @@
 	import GitHubRepoDetails from '$lib/components/GitHubRepoDetails.svelte'
 	import Loader from '$lib/components/Loader.svelte'
 	import Modal from '$lib/components/Modal.svelte'
+	import Seo from '$lib/components/Seo.svelte'
 	import { formatDistanceToNow } from 'date-fns'
 
 	export let data
-
-	let title = 'Corey Damocles | Projects'
 
 	type ActiveModalType =
 		| null
@@ -34,9 +33,7 @@
 	$: activeProjectDetails = projectDetails[activeModalType]
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-</svelte:head>
+<Seo title="Corey Damocles | Projects" />
 
 {#await data.projects}
 	<div class="loader_container">

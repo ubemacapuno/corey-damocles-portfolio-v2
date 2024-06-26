@@ -3,10 +3,10 @@
 	import ProjectsLink from '$lib/components/ProjectsLink.svelte'
 	import ResumeDetails from '$lib/components/ResumeDetails.svelte'
 	import ScrollButton from '$lib/components/ScrollButton.svelte'
+	import Seo from '$lib/components/Seo.svelte'
 	import SocialLinks from '$lib/components/SocialLinks.svelte'
 	import { onDestroy } from 'svelte'
 
-	let pageTitle = 'Corey Damocles | Projects'
 	let isAboutSectionVisible = false
 	let isExperienceSectionVisible = false
 
@@ -59,9 +59,7 @@
 	})
 </script>
 
-<svelte:head>
-	<title>{pageTitle}</title>
-</svelte:head>
+<Seo />
 
 <div class="homepage_container">
 	<div class="header_content">
