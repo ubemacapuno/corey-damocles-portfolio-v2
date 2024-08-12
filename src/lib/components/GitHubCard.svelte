@@ -138,5 +138,6 @@
 		display: flex;
 		align-items: center;
 		gap: var(--gap_smallest);
+		color: var(--subtext_color);
 	}
 </style>
