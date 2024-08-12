@@ -8,7 +8,7 @@ export const projectDetails = {
 		image: '/images/chrono-core.JPG',
 		title: 'Chrono Core'
 	},
-	'svelte-step-bro': {
+	'svelte-step': {
 		repoLink: 'https://github.com/ubemacapuno/svelte-step-bro',
 		demoLink: 'https://stepbro.vercel.app/',
 		description:

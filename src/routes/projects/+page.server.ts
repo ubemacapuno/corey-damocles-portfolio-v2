@@ -4,7 +4,7 @@ export const load: PageServerLoad = async () => {
 	const username = 'ubemacapuno'
 	const repoNames = [
 		'chrono-core',
-		'svelte-step-bro',
+		'svelte-step',
 		'rep-log',
 		'foodie-blog-sveltekit',
 		'capa-tracker-sveltekit',
@@ -13,7 +13,7 @@ export const load: PageServerLoad = async () => {
 
 	// mapping of repo names to their languages
 	const repoLanguages = {
-		'svelte-step-bro': [
+		'svelte-step': [
 			{ language: 'TypeScript', color: 'var(--typescript)' },
 			{ language: 'Svelte', color: 'var(--svelte)' },
 			{ language: 'PostCSS', color: 'var(--postcss)' }
