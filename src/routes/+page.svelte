@@ -65,7 +65,7 @@
 	<div class="header_content">
 		<div>
 			<h1>Corey Damocles</h1>
-			<h2>Software Engineer at Fast DMS</h2>
+			<h2>Software Engineer</h2>
 
 			<h3 class="tagline">
 				Utilizing cutting-edge technologies to craft dynamic and streamlined software solutions.
