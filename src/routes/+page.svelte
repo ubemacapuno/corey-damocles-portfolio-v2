@@ -131,10 +131,10 @@
 			<ul>
 				<li>JavaScript (ES6+)</li>
 				<li>TypeScript</li>
-				<li>Svelte</li>
+				<li>Svelte + SvelteKit</li>
+				<li>React + Next.js</li>
 				<li>Tailwind CSS</li>
-				<li>React</li>
-				<li>Python</li>
+				<li>PostgreSQL + Drizzle</li>
 				<li>MongoDB</li>
 				<li>Node.js</li>
 			</ul>

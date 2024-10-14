@@ -1,14 +1,36 @@
 export const resumeDetails = [
 	{
+		company_name: 'Pure Func',
+		start: 'APR 2022',
+		end: 'Present',
+		role: 'Full-Stack Developer',
+		summary:
+			'I build custom web solutions across diverse sectors (e.g., manufacturing, healthcare, hospitality), mainly using Svelte or React for the front-end and Supabase/PostgreSQL for the backend. Through Agile and Lean methods, I ensure high-quality deliverables via code reviews and testing. Collaborating with stakeholders, developers, and designers, I refine app experiences and meet with local customers to meet their needs.',
+		tags: [
+			'TypeScript',
+			'JavaScript',
+			'SvelteKit/Svelte',
+			'Next.js/React',
+			'PostegreSQL',
+			'Supabase',
+			'Drizzle',
+			'Tailwind CSS',
+			'Docker',
+			'shadcn/ui'
+		],
+		url: 'https://purefunc.io/'
+	},
+	{
 		company_name: 'Fast DMS',
 		start: 'DEC 2022',
-		end: 'Present',
+		end: 'SEP 2023',
 		role: 'Software Engineer',
 		summary:
-			'I design and develop full-stack ERP and Supply Chain Management applications for the industrial manufacturing and procurement sector, specializing in converting part designs into instant quotes with detailed lead times, while managing the full lifecycle from inventory tracking to quality control to customer delivery.',
+			'I designed and developed full-stack ERP and Supply Chain Management applications for the industrial manufacturing and procurement sector, specializing in converting part designs into instant quotes with detailed lead times, while managing the full lifecycle from inventory tracking to quality control to customer delivery.',
 		tags: [
 			'TypeScript',
 			'SvelteKit/Svelte',
+			'React',
 			'MongoDB',
 			'Node.js',
 			'WebSockets',
@@ -19,16 +41,6 @@ export const resumeDetails = [
 			'Three.js'
 		],
 		url: 'https://fastdms.com/'
-	},
-	{
-		company_name: 'Pure Func',
-		start: 'APR 2022',
-		end: 'Present',
-		role: 'Front-End Developer',
-		summary:
-			'As a consulting front-end developer, I build dynamic web apps, mainly using Svelte or React for the front-end and Supabase/PostgreSQL for the backend. Through Agile and Lean methods, I ensure high-quality deliverables via code reviews and testing. Collaborating with stakeholders and developers, I refine app experiences and meet with local customers to meet their needs.',
-		tags: ['TypeScript', 'JavaScript', 'Svelte', 'React', 'PostegreSQL', 'Supabase'],
-		url: 'https://purefunc.io/'
 	},
 	{
 		company_name: 'Dexcom',

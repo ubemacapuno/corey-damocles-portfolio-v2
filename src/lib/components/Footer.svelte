@@ -4,7 +4,7 @@
 			© {new Date().getFullYear()}
 		</span>
 		<span>
-			Powered by
+			Coded by yours truly, and powered by
 			<a
 				rel="noreferrer noopener"
 				class="link"

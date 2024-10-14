@@ -1,4 +1,15 @@
 export const projectDetails = {
+	'open-ai-playground': {
+		repoLink: 'https://github.com/ubemacapuno/open-ai-playground',
+		demoLink: 'https://www.ai-ssue.org/',
+		description: `<p>
+		Open AI Playground is a personal project space for experimenting with the OpenAI API. It features a CAD PDF Drawing Parser that extracts key information and suggests manufacturing operations, and a Bug Ticket Generator that creates detailed issue tickets from user-submitted summaries.</p>
+		
+		<p>Built with SvelteKit, shadcn/ui, Pocketbase, and OpenAI API. This project showcases practical applications of AI in engineering and project management workflows, with plans to expand to CSV parsing and more document types.</p>
+		`,
+		image: '/images/open-ai-playground-screenshot.webp',
+		title: 'Open AI Playground'
+	},
 	'chrono-core': {
 		repoLink: 'https://github.com/ubemacapuno/chrono-core',
 		demoLink: '',
@@ -12,9 +23,9 @@ export const projectDetails = {
 		repoLink: 'https://github.com/ubemacapuno/svelte-step-bro',
 		demoLink: 'https://stepbro.vercel.app/',
 		description:
-			'<p>Svelte STEP Bro offers a free CAD viewing solution, enabling direct browser rendering of STEP files without costly licenses. Leveraging WASM via <a href="https://github.com/kovacsv/occt-import-js" target="_blank" rel="noreferrer noopener">occt-import-js</a> for STEP to JSON conversion, it ensures Three.js compatibility, making it a unique tool for engineers and machinists. This SvelteKit application simplifies viewing and sharing 3D models, merging modern web tech with SvelteKit to make complex 3D CAD data easily accessible online.</p>',
+			'<p>Svelte STEP offers a free CAD viewing solution, enabling direct browser rendering of STEP files without costly licenses. Leveraging WASM via <a href="https://github.com/kovacsv/occt-import-js" target="_blank" rel="noreferrer noopener">occt-import-js</a> for STEP to JSON conversion, it ensures Three.js compatibility, making it a unique tool for engineers and machinists. This SvelteKit application simplifies viewing and sharing 3D models, merging modern web tech with SvelteKit to make complex 3D CAD data easily accessible online.</p>',
 		image: '/images/svelte-step.jpg',
-		title: 'Svelte STEP Bro',
+		title: 'Svelte STEP',
 		hasImageBorder: true
 	},
 	'rep-log': {
@@ -35,17 +46,6 @@ export const projectDetails = {
 		<p>It features MongoDB for storage, SvelteKit form actions for easy recipe management, Authjs for secure login, and an OpenAI-powered AI chatbot for an interactive experience. Ideal for those seeking a hassle-free cooking and dining record-keeping platform.</p>`,
 		image: '/images/foodie-blog.png',
 		title: 'FoodieBlog'
-	},
-	'capa-tracker-sveltekit': {
-		repoLink: 'https://github.com/ubemacapuno/capa-tracker-sveltekit',
-		demoLink: 'https://capa-tracker.netlify.app/',
-		description: `<p>
-		Before transitioning to software, I worked in pharmaceutical and medical device industries, focusing on CAPA (Corrective And Preventive Action) for compliance. Leveraging this background, I created CAPA Tracker, a SvelteKit app for efficient CAPA record management—enabling easy creation, updates, and deletions to reduce process gaps. </p>
-		
-		<p>Built with SvelteKit, DaisyUI, and MongoDB, and featuring secure Auth.js authentication plus an OpenAI-powered chatbot, CAPA Tracker enhances regulatory adherence and streamlines workflows in key industries.</p>
-    `,
-		image: '/images/capa-tracker.png',
-		title: 'CAPA Tracker'
 	},
 	'pokemon-pi-dashboard': {
 		repoLink: 'https://github.com/ubemacapuno/pokemon-pi-dashboard?tab=readme-ov-file',

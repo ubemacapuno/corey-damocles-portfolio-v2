@@ -3,12 +3,12 @@ import type { PageServerLoad } from './$types'
 export const load: PageServerLoad = async () => {
 	const username = 'ubemacapuno'
 	const repoNames = [
-		'chrono-core',
+		'open-ai-playground',
 		'svelte-step',
 		'rep-log',
 		'foodie-blog-sveltekit',
-		'capa-tracker-sveltekit',
-		'pokemon-pi-dashboard'
+		'pokemon-pi-dashboard',
+		'chrono-core'
 	]
 
 	// mapping of repo names to their languages
@@ -40,7 +40,7 @@ export const load: PageServerLoad = async () => {
 			{ language: 'React', color: 'var(--react)' },
 			{ language: 'CSS', color: 'var(--css)' }
 		],
-		'capa-tracker-sveltekit': [
+		'open-ai-playground': [
 			{ language: 'TypeScript', color: 'var(--typescript)' },
 			{ language: 'Svelte', color: 'var(--svelte)' },
 			{ language: 'Tailwind CSS', color: 'var(--tailwindcss)' },
