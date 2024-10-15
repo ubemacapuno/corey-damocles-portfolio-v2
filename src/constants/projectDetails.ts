@@ -1,7 +1,7 @@
 export const projectDetails = {
 	'open-ai-playground': {
 		repoLink: 'https://github.com/ubemacapuno/open-ai-playground',
-		demoLink: 'https://www.ai-ssue.org/',
+		// demoLink: 'https://www.ai-ssue.org/', // TODO: Enable when working
 		description: `<p>
 		Open AI Playground is a personal project space for experimenting with the OpenAI API. It features a CAD PDF Drawing Parser that extracts key information and suggests manufacturing operations, and a Bug Ticket Generator that creates detailed issue tickets from user-submitted summaries.</p>
 		
