@@ -23,7 +23,7 @@ export const resumeDetails = [
 	{
 		company_name: 'Fast DMS',
 		start: 'DEC 2022',
-		end: 'SEP 2023',
+		end: 'SEP 2024',
 		role: 'Software Engineer',
 		summary:
 			'I designed and developed full-stack ERP and Supply Chain Management applications for the industrial manufacturing and procurement sector, specializing in converting part designs into instant quotes with detailed lead times, while managing the full lifecycle from inventory tracking to quality control to customer delivery.',
