@@ -57,3 +57,69 @@ export const projectDetails = {
 		title: 'Pokémon Pi Dashboard'
 	}
 }
+
+// If fetch fails, use this fallback data instead:
+export const fallbackProjects = {
+	projects: [
+		{
+			name: 'open-ai-playground',
+			description:
+				'Playground repo of features utilizing OpenAI API, including a ticketing system and engineering drawing analyzer.',
+			languages: [Array],
+			stars: 0,
+			forks: 0,
+			updated: '12/7/2024',
+			src: 'https://github.com/ubemacapuno/open-ai-playground'
+		},
+		{
+			name: 'svelte-step',
+			description:
+				'A simple STEP viewer for CAD professionals, built with SvelteKit/TypeScript/Three.js/occt-import-js',
+			languages: [Array],
+			stars: 1,
+			forks: 1,
+			updated: '8/9/2024',
+			src: 'https://github.com/ubemacapuno/svelte-step'
+		},
+		{
+			name: 'rep-log',
+			description:
+				'Enhance your exercise regimen with RepLog, a React/TypeScript app which includes a responsive UI made with Tailwind CSS. It allows you to track your reps and plan your workouts conveniently, keeping all data stored on your device.',
+			languages: [Array],
+			stars: 0,
+			forks: 0,
+			updated: '1/22/2024',
+			src: 'https://github.com/ubemacapuno/rep-log'
+		},
+		{
+			name: 'foodie-blog-sveltekit',
+			description:
+				'A SvelteKit recipe hub utilizing MongoDB, AuthJS, & OpenAI for a seamless, ad-free culinary journey. Designed for simplicity and efficient recipe management.',
+			languages: [Array],
+			stars: 0,
+			forks: 0,
+			updated: '5/15/2024',
+			src: 'https://github.com/ubemacapuno/foodie-blog-sveltekit'
+		},
+		{
+			name: 'pokemon-pi-dashboard',
+			description:
+				'Pokémon weather UI dashboard to display on my Raspberry Pi. Powered by React, Vite, and OpenWeather API ⚡️.',
+			languages: [Array],
+			stars: 0,
+			forks: 0,
+			updated: '9/12/2024',
+			src: 'https://github.com/ubemacapuno/pokemon-pi-dashboard'
+		},
+		{
+			name: 'chrono-core',
+			description:
+				' ChronoCore is a Python + React + TypeScript tool for real-time monitoring of GPU, CPU, and RAM, using WebSockets for live updates, displayed on a Raspberry Pi. ',
+			languages: [Array],
+			stars: 0,
+			forks: 0,
+			updated: '2/25/2024',
+			src: 'https://github.com/ubemacapuno/chrono-core'
+		}
+	]
+}
