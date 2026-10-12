@@ -42,7 +42,7 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({ runtime: 'nodejs22.x' }),
 		alias: {
 			$elements: './src/elements',
 			$utilities: './src/utilities',
