@@ -1,0 +1,10 @@
+{
+	"redirects": [
+		{
+			"source": "/(.*)",
+			"has": [{ "type": "host", "value": "coreydamocles.vercel.app" }],
+			"destination": "https://coreydamocles.com",
+			"permanent": true
+		}
+	]
+}
